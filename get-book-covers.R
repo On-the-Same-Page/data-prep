@@ -33,6 +33,9 @@ while (i <= n) {
   i <- i + 1
 }
 
+write.csv(reference, 'img-filenames-table.csv')
+write_rds(reference, 'img-filenames-table.rds')
+
 #error in 288, NA
 #error in 330, forbidden 403
 #error in 408, NA
