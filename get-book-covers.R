@@ -26,7 +26,7 @@ while (i <= n) {
   curl_download(img_url, destfile = paste0('./imgs/', file_name))
   
   if (i %% 50 == 0) {
-    print(paste0('Estou no livro ', i, ', pausando por 0.5s...'))
+    print(paste0("We're on book ", i, ", pausing por 0.5s..."))
     Sys.sleep(.5)
   }
   
