@@ -91,16 +91,51 @@ write.csv(data_clean, 'data.csv', fileEncoding = 'utf-8')
 write.csv(genres_count, 'genres.csv', fileEncoding = 'utf-8')
 
 
+# Superdata ---------------------------------------------------------------
+
+list_of_genres <- c('Fantasy', 'Romance', 'Mystery', 'Historical Fiction', 'Science Fiction', 'Thriller')
+
+super_data <- list()
+
+generate_mini_dataset_genre <- function(genre) {
+  
+  df <- data_clean %>% 
+    filter(.data[[genre]]) %>% select(avgRating, numPages, ratingsCount) %>%
+    mutate(genre = genre)
+  print(genre)
+  print(tail(df))
+  
+  return(df)
+  
+}
+
+super_data <- purrr::map(list_of_genres, generate_mini_dataset_genre)
+
+super_df <- bind_rows(super_data)
+
+ggplot(super_df, aes(x = numPages, y = genre, color = genre)) + 
+  ggbeeswarm::geom_quasirandom(groupOnX = FALSE, alpha = .4, shape = 16) +
+  geom_boxplot(color = 'black', fill = 'transparent') + 
+  scale_x_continuous(limits = c(0, 2000)) +
+  labs(y = NULL) +
+  theme_charts + theme(legend.position = 'none')
+
+ggplot(super_df, aes(x = numPages, y = genre, color = genre)) + 
+  ggbeeswarm::geom_quasirandom(groupOnX = FALSE, alpha = .4, shape = 16) +
+  geom_boxplot(color = 'black', fill = 'transparent') + 
+  scale_x_continuous(limits = c(0, 2000)) +
+  labs(y = NULL) +
+  theme_charts + theme(legend.position = 'none')
+
 
 # Exploration -------------------------------------------------------------
-
 
 theme_charts <- theme_minimal() +
   theme(
     text = element_text(family = 'Fira Code')
   )
 
-ggplot(genres_count %>% filter(pct >= .1),
+ggplot(genres_count %>% filter(pct >= .05),
        aes(x = pct, y = reorder(genres, n))) + 
   geom_col(width = .75, fill = 'steelblue') +
   geom_text(aes(label = scales::percent(pct, accuracy = .1)), 
@@ -124,6 +159,14 @@ ggplot(data_genres %>% filter(#rank <= 1000,
   theme_charts
 
 ggplot(data_genres %>% filter(#rank <= 1000, 
+  year_publication >= 1900), aes(y = numPages, x = year_publication)) + 
+  geom_point(alpha = .3, shape = 16, color = 'hotpink') +
+  scale_y_log10(labels = scales::comma_format(big.mark = '.')) +
+  labs(x = "Year of publication", title = 'Number of ratings for each book according with the year of publication',
+       y = NULL, subtitle = 'Considering only books published after 1900') +
+  theme_charts
+
+ggplot(data_genres %>% filter(#rank <= 1000, 
   year_publication >= 1900), aes(y = avgRating, x = year_publication)) + 
   geom_point(alpha = .3, shape = 16, color = 'hotpink') +
   scale_y_continuous(labels = scales::comma_format(big.mark = '.'), limits = c(1,5)) +
@@ -136,7 +179,12 @@ ggplot(data_genres %>% filter(#rank <= 1000,
   geom_point(alpha = .9, shape = 16) +
   scale_y_continuous(labels = scales::comma_format(big.mark = '.'), limits = c(1,5)) +
   labs(x = "Year of publication", title = 'Average rating for each book each book according with the year of publication',
-       y = NULL, subtitle = 'Considering only books published after 1900') +
+       y = NULL, subtitle = 'Highlighting Fantasy books. Considering only books published after 1900') +
   scale_color_manual(values = c("TRUE" = 'tomato', "FALSE" = '#dedede')) +
   theme_charts +
   theme(legend.position = 'none')
+
+ggplot(data_genres, aes(x = avgRating, y = Fantasy)) + 
+  geom_boxplot() + 
+  ggbeeswarm::geom_quasirandom(groupOnX = FALSE, color = 'hotpink', alpha = .6) +
+  theme_charts
