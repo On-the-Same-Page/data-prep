@@ -15,7 +15,12 @@ additional_data <- additional_data_raw %>%
     list_score = stringr::str_remove(score, "score: "),
     list_score = as.numeric(str_replace_all(list_score, ',', '')),
     number_votes = stringr::str_remove(votes, " people voted"),
-    number_votes = as.numeric(str_replace_all(number_votes, ',', ''))
+    number_votes = as.numeric(str_replace_all(number_votes, ',', '')),
+    info = str_replace(info, '\n', ''), 
+    avg_rating = str_sub(info,
+                         start = str_locate(info, 'avg')[1] - 5,
+                         end = str_locate(info, 'avg')[1] - 2),
+    avg_rating_no = as.numeric(str_trim(avg_rating))
   ) %>%
   filter(!is.na(year_publication))
 
@@ -46,7 +51,11 @@ data_genres <- data_pre
 
 for (i in 1:nrow(data_genres)) {
   
-  data_genres[i, 'genres_list'] = data_genres[1,'genres'] %>% unlist() %>% paste(collapse = ', ')
+  data_genres[i, 'genres_list'] = data_genres[i,'genres'] %>% unlist() %>% paste(collapse = ', ')
+  data_genres[i, 'authors_list'] = data_genres[i,'author'] %>% unlist() %>% paste(collapse = ', ')
+  data_genres[i, 'series_list'] = data_genres[i,'series'] %>% unlist() %>% paste(collapse = ', ')
+  data_genres[i, 'places_list'] = data_genres[i,'places'] %>% unlist() %>% paste(collapse = ', ')
+  data_genres[i, 'awards_list'] = data_genres[i,'awards'][[1]][['name']] %>% unlist() %>% paste(collapse = ', ')
   
   for (genre in genres_list) {
     
@@ -54,15 +63,44 @@ for (i in 1:nrow(data_genres)) {
     
   }
   
-}
+  # ratings
+  ratings <- unlist(data_genres[i, 'ratingHistogram'])
   
+  w_rating <- 0
+  total_ratings <- 0
+  
+  for (r in 1:length(ratings)) {
+    w_rating <- w_rating + r * ratings[r]
+    total_ratings <- total_ratings + ratings[r]
+  }
+  
+  data_genres[i, 'avgRating'] = w_rating / total_ratings
+  
+}
+
+data_clean <- data_genres %>%
+  mutate(
+    avgRating = round(avgRating, digits = 2)
+  ) %>%
+  select(-genres, -author, -publishDate, -characters, -ratingHistogram, -info, -score, -votes, -avg_rating, -avg_rating_no, -places, -awards, -series)
+
+# test
+# sum(round(data_genres$avgRating - data_genres$avg_rating_no,0), na.rm = T)
+
+write.csv(data_clean, 'data.csv', fileEncoding = 'utf-8')
+write.csv(genres_count, 'genres.csv', fileEncoding = 'utf-8')
+
+
+
+# Exploration -------------------------------------------------------------
+
 
 theme_charts <- theme_minimal() +
   theme(
     text = element_text(family = 'Fira Code')
   )
 
-ggplot(genres_count %>% filter(pct > .05),
+ggplot(genres_count %>% filter(pct >= .1),
        aes(x = pct, y = reorder(genres, n))) + 
   geom_col(width = .75, fill = 'steelblue') +
   geom_text(aes(label = scales::percent(pct, accuracy = .1)), 
@@ -74,3 +112,31 @@ ggplot(genres_count %>% filter(pct > .05),
     panel.grid.major.y = element_blank()
   )
 
+ggplot(data_genres %>% filter(rank <= 1000), aes(x = ratingsCount, y = numPages)) + geom_point(alpha = .3, shape = 16) +
+  theme_charts
+
+ggplot(data_genres %>% filter(#rank <= 1000, 
+  year_publication >= 1900), aes(y = ratingsCount, x = year_publication)) + 
+  geom_point(alpha = .3, shape = 16, color = 'hotpink') +
+  scale_y_log10(labels = scales::comma_format(big.mark = '.')) +
+  labs(x = "Year of publication", title = 'Number of ratings for each book according with the year of publication',
+       y = NULL, subtitle = 'Considering only books published after 1900') +
+  theme_charts
+
+ggplot(data_genres %>% filter(#rank <= 1000, 
+  year_publication >= 1900), aes(y = avgRating, x = year_publication)) + 
+  geom_point(alpha = .3, shape = 16, color = 'hotpink') +
+  scale_y_continuous(labels = scales::comma_format(big.mark = '.'), limits = c(1,5)) +
+  labs(x = "Year of publication", title = 'Average rating for each book according with the year of publication',
+       y = NULL, subtitle = 'Considering only books published after 1900') +
+  theme_charts
+
+ggplot(data_genres %>% filter(#rank <= 1000, 
+  year_publication >= 1900), aes(y = avgRating, x = year_publication, color = Fantasy)) + 
+  geom_point(alpha = .9, shape = 16) +
+  scale_y_continuous(labels = scales::comma_format(big.mark = '.'), limits = c(1,5)) +
+  labs(x = "Year of publication", title = 'Average rating for each book each book according with the year of publication',
+       y = NULL, subtitle = 'Considering only books published after 1900') +
+  scale_color_manual(values = c("TRUE" = 'tomato', "FALSE" = '#dedede')) +
+  theme_charts +
+  theme(legend.position = 'none')

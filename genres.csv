@@ -1,0 +1,557 @@
+"","genres","n","pct"
+"1","12th Century",1,2e-04
+"2","13th Century",2,4e-04
+"3","14th Century",4,8e-04
+"4","15th Century",3,6e-04
+"5","16th Century",7,0.0014
+"6","17th Century",5,0.001
+"7","18th Century",18,0.0036
+"8","19th Century",133,0.0266
+"9","20th Century",286,0.0572
+"10","21st Century",13,0.0026
+"11","Abuse",71,0.0142
+"12","Academia",1,2e-04
+"13","Academic",6,0.0012
+"14","Action",110,0.022
+"15","Adoption",5,0.001
+"16","Adult",1203,0.2406
+"17","Adult Fiction",410,0.082
+"18","Adventure",1015,0.203
+"19","Africa",58,0.0116
+"20","African American",43,0.0086
+"21","African Literature",4,8e-04
+"22","Algeria",1,2e-04
+"23","Aliens",53,0.0106
+"24","Alternate History",17,0.0034
+"25","Amazon",10,0.002
+"26","American",300,0.06
+"27","American Civil War",3,6e-04
+"28","American Fiction",2,4e-04
+"29","American History",42,0.0084
+"30","American Revolution",6,0.0012
+"31","American Revolutionary War",1,2e-04
+"32","Americana",14,0.0028
+"33","Amish",4,8e-04
+"34","Ancient",18,0.0036
+"35","Ancient History",15,0.003
+"36","Angels",71,0.0142
+"37","Anglo Saxon",1,2e-04
+"38","Animal Fiction",13,0.0026
+"39","Animals",112,0.0224
+"40","Anime",6,0.0012
+"41","Anthologies",23,0.0046
+"42","Anthropology",15,0.003
+"43","Anti Racist",6,0.0012
+"44","Apocalyptic",31,0.0062
+"45","Archaeology",2,4e-04
+"46","Architecture",4,8e-04
+"47","Art",36,0.0072
+"48","Art Design",3,6e-04
+"49","Art History",5,0.001
+"50","Arthurian",10,0.002
+"51","Artificial Intelligence",1,2e-04
+"52","Asia",102,0.0204
+"53","Asian Literature",30,0.006
+"54","Astronomy",8,0.0016
+"55","Atheism",10,0.002
+"56","Audiobook",1560,0.312
+"57","Australia",25,0.005
+"58","Autistic Spectrum Disorder",4,8e-04
+"59","Autobiography",142,0.0284
+"60","Aviation",3,6e-04
+"61","Bande Dessinée",1,2e-04
+"62","Banks",1,2e-04
+"63","Banned Books",23,0.0046
+"64","Baseball",4,8e-04
+"65","Batman",5,0.001
+"66","BDSM",29,0.0058
+"67","Beauty and The Beast",5,0.001
+"68","Belgian",1,2e-04
+"69","Belgium",3,6e-04
+"70","Biblical",2,4e-04
+"71","Biblical Fiction",5,0.001
+"72","Biography",270,0.054
+"73","Biography Memoir",167,0.0334
+"74","Biology",17,0.0034
+"75","Birds",2,4e-04
+"76","Boarding School",4,8e-04
+"77","Book Club",182,0.0364
+"78","Books About Books",34,0.0068
+"79","Botswana",1,2e-04
+"80","Boys Love",2,4e-04
+"81","Brain",4,8e-04
+"82","Brazil",8,0.0016
+"83","British Literature",236,0.0472
+"84","Buddhism",6,0.0012
+"85","Buisness",6,0.0012
+"86","Bulgaria",1,2e-04
+"87","Bulgarian Literature",2,4e-04
+"88","Business",79,0.0158
+"89","Canada",45,0.009
+"90","Canadian Literature",6,0.0012
+"91","Cartoon",2,4e-04
+"92","Catholic",4,8e-04
+"93","Cats",17,0.0034
+"94","Chapter Books",24,0.0048
+"95","Chemistry",1,2e-04
+"96","Chess",3,6e-04
+"97","Chick Lit",353,0.0706
+"98","Childrens",527,0.1054
+"99","Childrens Classics",7,0.0014
+"100","China",32,0.0064
+"101","Chinese Literature",1,2e-04
+"102","Christian",80,0.016
+"103","Christian Fantasy",3,6e-04
+"104","Christian Fiction",46,0.0092
+"105","Christian Historical Fiction",1,2e-04
+"106","Christian Living",11,0.0022
+"107","Christian Non Fiction",5,0.001
+"108","Christian Romance",5,0.001
+"109","Christianity",45,0.009
+"110","Christmas",14,0.0028
+"111","Church",8,0.0016
+"112","Cities",1,2e-04
+"113","Civil War",11,0.0022
+"114","Classic Literature",117,0.0234
+"115","Classics",1431,0.2862
+"116","Clean Romance",2,4e-04
+"117","Climate Change",1,2e-04
+"118","Collections",7,0.0014
+"119","College",57,0.0114
+"120","Comedian",1,2e-04
+"121","Comedy",141,0.0282
+"122","Comic Book",32,0.0064
+"123","Comic Fantasy",7,0.0014
+"124","Comic Strips",6,0.0012
+"125","Comics",82,0.0164
+"126","Comics Manga",10,0.002
+"127","Coming Of Age",147,0.0294
+"128","Communication",3,6e-04
+"129","Computer Science",1,2e-04
+"130","Conspiracy Theories",3,6e-04
+"131","Contemporary",1227,0.2454
+"132","Contemporary Romance",272,0.0544
+"133","Cookbooks",1,2e-04
+"134","Cooking",5,0.001
+"135","Counter Culture",2,4e-04
+"136","Counting",1,2e-04
+"137","Cozy Mystery",4,8e-04
+"138","Crafts",1,2e-04
+"139","Crime",407,0.0814
+"140","Criticism",1,2e-04
+"141","Cult Classics",1,2e-04
+"142","Cults",4,8e-04
+"143","Cultural",24,0.0048
+"144","Cyberpunk",21,0.0042
+"145","Czech Literature",13,0.0026
+"146","Danish",2,4e-04
+"147","Dark",100,0.02
+"148","Dark Fantasy",35,0.007
+"149","Dc Comics",8,0.0016
+"150","Death",38,0.0076
+"151","Deception",1,2e-04
+"152","Demons",67,0.0134
+"153","Denmark",1,2e-04
+"154","Design",8,0.0016
+"155","Detective",94,0.0188
+"156","Diary",7,0.0014
+"157","Dinosaurs",5,0.001
+"158","Disability",6,0.0012
+"159","Discipleship",1,2e-04
+"160","Dogs",15,0.003
+"161","Dragonlance",1,2e-04
+"162","Dragons",74,0.0148
+"163","Drama",352,0.0704
+"164","Drawing",1,2e-04
+"165","Dungeons and Dragons",2,4e-04
+"166","Dutch Literature",1,2e-04
+"167","Dying Earth",1,2e-04
+"168","Dystopia",325,0.065
+"169","Eastern Philosophy",3,6e-04
+"170","Ecology",4,8e-04
+"171","Economics",36,0.0072
+"172","Education",36,0.0072
+"173","Egypt",21,0.0042
+"174","Egyptian Literature",8,0.0016
+"175","Elves",1,2e-04
+"176","Emotion",1,2e-04
+"177","Engineering",1,2e-04
+"178","English Literature",17,0.0034
+"179","Entrepreneurship",10,0.002
+"180","Environment",22,0.0044
+"181","Epic",126,0.0252
+"182","Epic Fantasy",167,0.0334
+"183","Erotic Romance",48,0.0096
+"184","Erotica",137,0.0274
+"185","Espionage",46,0.0092
+"186","Essays",55,0.011
+"187","Ethiopia",1,2e-04
+"188","European History",7,0.0014
+"189","European Literature",1,2e-04
+"190","Evolution",7,0.0014
+"191","Fae",64,0.0128
+"192","Fairies",25,0.005
+"193","Fairy Tale Retellings",7,0.0014
+"194","Fairy Tales",75,0.015
+"195","Faith",32,0.0064
+"196","Family",97,0.0194
+"197","Fan Fiction",3,6e-04
+"198","Fantasy",2192,0.4384
+"199","Fantasy Romance",48,0.0096
+"200","Fashion",1,2e-04
+"201","Feminism",76,0.0152
+"202","Fiction",4212,0.8424
+"203","Fighters",5,0.001
+"204","Film",2,4e-04
+"205","Finance",21,0.0042
+"206","Finnish Literature",3,6e-04
+"207","Fitness",1,2e-04
+"208","Folklore",5,0.001
+"209","Food",16,0.0032
+"210","Foodie",3,6e-04
+"211","Football",2,4e-04
+"212","Forgotten Realms",2,4e-04
+"213","Fostering",3,6e-04
+"214","France",105,0.021
+"215","French Literature",61,0.0122
+"216","Futuristic",12,0.0024
+"217","Game Design",1,2e-04
+"218","Games",1,2e-04
+"219","Gaming",1,2e-04
+"220","Gardening",2,4e-04
+"221","Gay",42,0.0084
+"222","Gender",10,0.002
+"223","Gender Studies",4,8e-04
+"224","Genetics",2,4e-04
+"225","Geography",2,4e-04
+"226","German Literature",68,0.0136
+"227","Germany",38,0.0076
+"228","Ghana",1,2e-04
+"229","Ghost Stories",5,0.001
+"230","Ghosts",61,0.0122
+"231","Gods",3,6e-04
+"232","Gothic",101,0.0202
+"233","Gothic Horror",1,2e-04
+"234","Gothic Romance",1,2e-04
+"235","Graphic Novels",88,0.0176
+"236","Graphic Novels Comics",44,0.0088
+"237","Graphic Novels Manga",1,2e-04
+"238","Greece",17,0.0034
+"239","Greek Mythology",51,0.0102
+"240","Guidebook",1,2e-04
+"241","Halloween",6,0.0012
+"242","Hard Boiled",3,6e-04
+"243","Hard Science Fiction",3,6e-04
+"244","Harem",1,2e-04
+"245","Health",27,0.0054
+"246","Heroic Fantasy",2,4e-04
+"247","High Fantasy",333,0.0666
+"248","High School",102,0.0204
+"249","Hinduism",5,0.001
+"250","Historical",749,0.1498
+"251","Historical Fantasy",10,0.002
+"252","Historical Fiction",996,0.1992
+"253","Historical Mystery",7,0.0014
+"254","Historical Romance",66,0.0132
+"255","History",265,0.053
+"256","History Of Science",2,4e-04
+"257","Hockey",2,4e-04
+"258","Holiday",10,0.002
+"259","Holocaust",36,0.0072
+"260","Horror",453,0.0906
+"261","Horses",6,0.0012
+"262","How To",17,0.0034
+"263","Hugo Awards",15,0.003
+"264","Human Development",1,2e-04
+"265","Humor",442,0.0884
+"266","Hungarian Literature",3,6e-04
+"267","Hungary",3,6e-04
+"268","Illness",1,2e-04
+"269","India",50,0.01
+"270","Indian Literature",25,0.005
+"271","Indonesian Literature",3,6e-04
+"272","Inspirational",90,0.018
+"273","International",1,2e-04
+"274","International Relations",1,2e-04
+"275","Iran",12,0.0024
+"276","Ireland",32,0.0064
+"277","Irish Literature",26,0.0052
+"278","Islam",17,0.0034
+"279","Israel",3,6e-04
+"280","Italian Literature",27,0.0054
+"281","Italy",49,0.0098
+"282","Japan",58,0.0116
+"283","Japanese Literature",43,0.0086
+"284","Jazz",1,2e-04
+"285","Jewish",20,0.004
+"286","Jokes",1,2e-04
+"287","Journalism",19,0.0038
+"288","Judaism",5,0.001
+"289","Juvenile",137,0.0274
+"290","Kenya",1,2e-04
+"291","Kids",38,0.0076
+"292","Language",3,6e-04
+"293","Latin American",33,0.0066
+"294","Latin American Literature",18,0.0036
+"295","Law",17,0.0034
+"296","Lds",8,0.0016
+"297","Lds Fiction",1,2e-04
+"298","Lds Non Fiction",5,0.001
+"299","Leadership",38,0.0076
+"300","Lebanon",2,4e-04
+"301","Legal Thriller",19,0.0038
+"302","Lesbian",23,0.0046
+"303","LGBT",186,0.0372
+"304","Liberia",1,2e-04
+"305","Linguistics",3,6e-04
+"306","Literary Criticism",1,2e-04
+"307","Literary Fiction",479,0.0958
+"308","Literature",1090,0.218
+"309","Love",94,0.0188
+"310","Love Story",19,0.0038
+"311","Lovecraftian",5,0.001
+"312","M F Romance",4,8e-04
+"313","M M Romance",19,0.0038
+"314","Magic",675,0.135
+"315","Magical Realism",129,0.0258
+"316","Management",12,0.0024
+"317","Manga",20,0.004
+"318","Maritime",1,2e-04
+"319","Marriage",5,0.001
+"320","Martial Arts",2,4e-04
+"321","Mathematics",10,0.002
+"322","Media Tie In",8,0.0016
+"323","Medical",24,0.0048
+"324","Medicine",24,0.0048
+"325","Medieval",42,0.0084
+"326","Medieval History",1,2e-04
+"327","Medieval Romance",4,8e-04
+"328","Memoir",241,0.0482
+"329","Menage",2,4e-04
+"330","Mental Health",104,0.0208
+"331","Mental Illness",45,0.009
+"332","Mermaids",5,0.001
+"333","Metaphysics",5,0.001
+"334","Microhistory",1,2e-04
+"335","Middle Grade",434,0.0868
+"336","Military Fiction",57,0.0114
+"337","Military History",10,0.002
+"338","Military Science Fiction",1,2e-04
+"339","Mixed Martial Arts",2,4e-04
+"340","Modern",12,0.0024
+"341","Modern Classics",18,0.0036
+"342","Money",7,0.0014
+"343","Monsters",2,4e-04
+"344","Mormonism",2,4e-04
+"345","Morocco",2,4e-04
+"346","Motorcycle",1,2e-04
+"347","Mountaineering",1,2e-04
+"348","Murder Mystery",38,0.0076
+"349","Music",45,0.009
+"350","Music Biography",1,2e-04
+"351","Musicians",6,0.0012
+"352","Muslims",1,2e-04
+"353","Mystery",890,0.178
+"354","Mystery Thriller",359,0.0718
+"355","Mysticism",3,6e-04
+"356","Mythology",169,0.0338
+"357","Native Americans",3,6e-04
+"358","Natural History",4,8e-04
+"359","Nature",34,0.0068
+"360","Neuroscience",6,0.0012
+"361","New Adult",268,0.0536
+"362","New Age",7,0.0014
+"363","New Weird",2,4e-04
+"364","New York",34,0.0068
+"365","Nigeria",6,0.0012
+"366","Nobel Prize",47,0.0094
+"367","Noir",19,0.0038
+"368","Nonfiction",556,0.1112
+"369","Nordic Noir",2,4e-04
+"370","Novella",39,0.0078
+"371","Novels",1376,0.2752
+"372","Nutrition",3,6e-04
+"373","Occult",3,6e-04
+"374","Outdoors",2,4e-04
+"375","Pakistan",7,0.0014
+"376","Palaeontology",1,2e-04
+"377","Paranormal",783,0.1566
+"378","Paranormal Romance",385,0.077
+"379","Parenting",6,0.0012
+"380","Personal Development",76,0.0152
+"381","Personal Finance",5,0.001
+"382","Philosophy",314,0.0628
+"383","Photography",1,2e-04
+"384","Physics",17,0.0034
+"385","Picture Books",52,0.0104
+"386","Pirates",14,0.0028
+"387","Plantagenet",3,6e-04
+"388","Plants",1,2e-04
+"389","Plays",80,0.016
+"390","Poetry",166,0.0332
+"391","Poland",6,0.0012
+"392","Police",2,4e-04
+"393","Polish Literature",9,0.0018
+"394","Political Science",12,0.0024
+"395","Politics",147,0.0294
+"396","Polygamy",2,4e-04
+"397","Pop Culture",2,4e-04
+"398","Popular Science",21,0.0042
+"399","Portugal",8,0.0016
+"400","Portuguese Literature",13,0.0026
+"401","Post Apocalyptic",130,0.026
+"402","Poverty",4,8e-04
+"403","Prehistoric",5,0.001
+"404","Presidents",6,0.0012
+"405","Productivity",18,0.0036
+"406","Programming",1,2e-04
+"407","Psychoanalysis",1,2e-04
+"408","Psychological Horror",1,2e-04
+"409","Psychological Thriller",22,0.0044
+"410","Psychology",174,0.0348
+"411","Pulp",5,0.001
+"412","Queer",130,0.026
+"413","Queer Lit",1,2e-04
+"414","Rabbits",2,4e-04
+"415","Race",44,0.0088
+"416","Read For School",80,0.016
+"417","Realistic Fiction",272,0.0544
+"418","Reference",30,0.006
+"419","Regency",11,0.0022
+"420","Regency Romance",9,0.0018
+"421","Relationships",12,0.0024
+"422","Religion",188,0.0376
+"423","Retellings",72,0.0144
+"424","Reverse Harem",6,0.0012
+"425","Road Trip",4,8e-04
+"426","Robots",4,8e-04
+"427","Rock N Roll",1,2e-04
+"428","Roman",44,0.0088
+"429","Romance",1753,0.3506
+"430","Romanian Literature",1,2e-04
+"431","Romantic",6,0.0012
+"432","Romantic Suspense",22,0.0044
+"433","Romanticism",6,0.0012
+"434","Russia",65,0.013
+"435","Russian History",2,4e-04
+"436","Russian Literature",39,0.0078
+"437","Rwanda",2,4e-04
+"438","Satanism",1,2e-04
+"439","Scandinavian Literature",21,0.0042
+"440","School",294,0.0588
+"441","Sci Fi Fantasy",1,2e-04
+"442","Science",117,0.0234
+"443","Science Fiction",705,0.141
+"444","Science Fiction Fantasy",562,0.1124
+"445","Science Fiction Romance",1,2e-04
+"446","Scotland",30,0.006
+"447","Seinen",2,4e-04
+"448","Self Help",130,0.026
+"449","Sequential Art",1,2e-04
+"450","Serbian Literature",4,8e-04
+"451","Sexuality",4,8e-04
+"452","Shapeshifters",58,0.0116
+"453","Shojo",1,2e-04
+"454","Shonen",3,6e-04
+"455","Short Stories",206,0.0412
+"456","Short Story Collection",3,6e-04
+"457","Sierra Leone",2,4e-04
+"458","Skepticism",2,4e-04
+"459","Slice Of Life",2,4e-04
+"460","Social",2,4e-04
+"461","Social Issues",3,6e-04
+"462","Social Justice",18,0.0036
+"463","Social Science",7,0.0014
+"464","Society",5,0.001
+"465","Sociology",60,0.012
+"466","Somalia",1,2e-04
+"467","South Africa",5,0.001
+"468","Southern",37,0.0074
+"469","Southern Gothic",15,0.003
+"470","Space",92,0.0184
+"471","Space Opera",58,0.0116
+"472","Spain",18,0.0036
+"473","Spanish Literature",54,0.0108
+"474","Speculative Fiction",115,0.023
+"475","Spirituality",119,0.0238
+"476","Splatterpunk",2,4e-04
+"477","Sports",38,0.0076
+"478","Sports Romance",15,0.003
+"479","Spy Thriller",12,0.0024
+"480","Star Wars",5,0.001
+"481","Steampunk",28,0.0056
+"482","Storytime",7,0.0014
+"483","Sudan",2,4e-04
+"484","Superheroes",13,0.0026
+"485","Superman",1,2e-04
+"486","Supernatural",519,0.1038
+"487","Surreal",1,2e-04
+"488","Survival",42,0.0084
+"489","Suspense",359,0.0718
+"490","Sustainability",2,4e-04
+"491","Swashbuckling",1,2e-04
+"492","Sweden",12,0.0024
+"493","Swedish Literature",7,0.0014
+"494","Sword and Sorcery",2,4e-04
+"495","Taoism",3,6e-04
+"496","Teaching",3,6e-04
+"497","Technical",1,2e-04
+"498","Technology",12,0.0024
+"499","Teen",367,0.0734
+"500","Terrorism",1,2e-04
+"501","Textbooks",2,4e-04
+"502","The United States Of America",71,0.0142
+"503","The World",1,2e-04
+"504","Theatre",71,0.0142
+"505","Theology",30,0.006
+"506","Theory",12,0.0024
+"507","Thriller",609,0.1218
+"508","Time Travel",77,0.0154
+"509","Time Travel Romance",1,2e-04
+"510","Tragedy",5,0.001
+"511","Transgender",4,8e-04
+"512","Travel",75,0.015
+"513","Travelogue",4,8e-04
+"514","True Crime",31,0.0062
+"515","True Story",11,0.0022
+"516","Tudor Period",7,0.0014
+"517","Turkish",8,0.0016
+"518","Turkish Literature",8,0.0016
+"519","Ukraine",2,4e-04
+"520","Unfinished",77,0.0154
+"521","Unicorns",1,2e-04
+"522","United States",1,2e-04
+"523","Urban",2,4e-04
+"524","Urban Fantasy",574,0.1148
+"525","Urban Planning",1,2e-04
+"526","Utopia",4,8e-04
+"527","Vampires",311,0.0622
+"528","Vegan",1,2e-04
+"529","Victorian",32,0.0064
+"530","Video Games",1,2e-04
+"531","Virtual Reality",1,2e-04
+"532","War",228,0.0456
+"533","Weird Fiction",9,0.0018
+"534","Werewolves",75,0.015
+"535","Western Romance",1,2e-04
+"536","Westerns",34,0.0068
+"537","Wicca",1,2e-04
+"538","Wildlife",3,6e-04
+"539","Witches",74,0.0148
+"540","Wizards",1,2e-04
+"541","Wolves",5,0.001
+"542","Womens",38,0.0076
+"543","Womens Fiction",13,0.0026
+"544","World History",7,0.0014
+"545","World War I",13,0.0026
+"546","World War II",76,0.0152
+"547","Writing",13,0.0026
+"548","Young Adult",1731,0.3462
+"549","Young Adult Contemporary",99,0.0198
+"550","Young Adult Fantasy",346,0.0692
+"551","Young Adult Historical Fiction",1,2e-04
+"552","Young Adult Paranormal",5,0.001
+"553","Young Adult Romance",48,0.0096
+"554","Young Adult Science Fiction",4,8e-04
+"555","Zimbabwe",1,2e-04
+"556","Zombies",28,0.0056
