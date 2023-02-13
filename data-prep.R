@@ -194,6 +194,10 @@ ggplot(data_genres, aes(x = avgRating, y = Fantasy)) +
 
 top800 <- data_clean %>% filter(rank <= 800)
 
+covers <- readRDS('img-filenames-table.rds')
+
+top800 <- top800 %>% left_join(covers) %>% filter(!is.na(filename))
+
 ggplot(top800) + geom_boxplot(aes(y = 1, x = numPages))
 ggplot(top800) + geom_boxplot(aes(y = 1, x = avgRating))
 ggplot(top800) + geom_boxplot(aes(y = 1, x = year_publication))
