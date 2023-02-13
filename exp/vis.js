@@ -29,18 +29,21 @@ function vis(data) {
       .style('height', book_h + 'px')
     ;
 
+    const data_sorted_numPages = [...data].sort((a,b) => b.numPages - a.numPages);
+    console.log(data_sorted_numPages);
+
     const hierarc_data = {
-        children: data
+        children: data_sorted_numPages
     }
 
     const pagesTreemap = d3.treemap()
       .tile(d3.treemapBinary)
       .size([chart.w, chart.h])
       .round(true)
-      (d3.hierarchy(hierarc_data.sort((a,b) => a.numPages - b.numPages)).sum(d => d.numPages))
+      (d3.hierarchy(hierarc_data).sum(d => d.numPages))
     ;
 
-    //console.log(pagesTreemap, pagesTreemap.leaves());
+    console.log(pagesTreemap, pagesTreemap.leaves());
 
     const btn = document.querySelector('button');
     btn.addEventListener('click', fire);
@@ -49,24 +52,24 @@ function vis(data) {
           .transition()
           .delay((d,i) => (i % 8) * 100)
           .duration(1000)
-          .style('transform', (d,i) => {
+          .style('transform', d => {
 
-            const book_data_from_hierarchy = pagesTreemap.children.filter(b => b.title == d.title)[0];
+            const book_data_from_hierarchy = pagesTreemap.children.filter(b => b.data.url == d.url)[0];
 
-            const new_w = pagesTreemap.children[i].x1 - pagesTreemap.children[i].x0;
-            const new_h = pagesTreemap.children[i].y1 - pagesTreemap.children[i].y0;
+            const new_w = book_data_from_hierarchy.x1 - book_data_from_hierarchy.x0;
+            const new_h = book_data_from_hierarchy.y1 - book_data_from_hierarchy.y0;
 
-            //const translate_x = pagesTreemap.children[i].x0 - ((i % nx) * book_w);
-            //const translate_y = pagesTreemap.children[i].y1 - (Math.floor(i / nx) * book_h);
+            //const translate_x = book_data_from_hierarchy.x0 - ((i % nx) * book_w);
+            //const translate_y = book_data_from_hierarchy.y1 - (Math.floor(i / nx) * book_h);
 
-            const translate_x = pagesTreemap.children[i].x0;
-            const translate_y = pagesTreemap.children[i].y0;
+            const translate_x = book_data_from_hierarchy.x0;
+            const translate_y = book_data_from_hierarchy.y0;
 
             const scale_x = new_w / book_w;
             const scale_y = new_h / book_h;
 
             if (d.title == 'Jonathan Strange & Mr Norrell') {
-                console.log(new_w, new_h, pagesTreemap.children[i].x0, pagesTreemap.children[i].y0)
+                console.log(new_w, new_h, book_data_from_hierarchy.x0, book_data_from_hierarchy.y0)
             }
 
             return `translate(${translate_x}px, ${translate_y}px) scale(${scale_x}, ${scale_y})`;
