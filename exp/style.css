@@ -16,4 +16,5 @@
 
 img.book {
     position: absolute;
+    transform-origin: 0 0;
 }
