@@ -188,3 +188,18 @@ ggplot(data_genres, aes(x = avgRating, y = Fantasy)) +
   geom_boxplot() + 
   ggbeeswarm::geom_quasirandom(groupOnX = FALSE, color = 'hotpink', alpha = .6) +
   theme_charts
+
+
+# top 800 -----------------------------------------------------------------
+
+top800 <- data_clean %>% filter(rank <= 800)
+
+ggplot(top800) + geom_boxplot(aes(y = 1, x = numPages))
+ggplot(top800) + geom_boxplot(aes(y = 1, x = avgRating))
+ggplot(top800) + geom_boxplot(aes(y = 1, x = year_publication))
+
+library(treemap)
+treemap(top800, index="title", vSize="numPages", type = "index")
+treemap(top800, index="title", vSize="ratingsCount", type = "index")
+
+jsonlite::write_json(top800, path = 'data.json')
