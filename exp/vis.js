@@ -13,6 +13,34 @@ function vis(data) {
 
     const nx = Math.floor(chart.w / book_w);
 
+    const margin = 100;
+    const x = d3.scaleLinear().range([margin/4, chart.w - margin]).domain([1,5]);
+
+    // sim
+    const sim = d3.forceSimulation();
+    function prepares_sim() {
+
+        const strength = 0.04;
+    
+        let flag = false;
+    
+        sim
+          //.velocityDecay(0.3)
+          .force('x', d3.forceX().strength(strength).x(d => x(d.avgRating)))
+          .force('y', d3.forceY().strength(strength/2).y(chart.h/2))
+          .force('collision', d3.forceCollide().strength(strength*2.5).radius(10))
+          //.alphaMin(0.1)
+          .on('tick', update_positions)
+          .on('end', save_last_positions)
+          .stop()
+        ;
+
+        sim.nodes(data);
+    
+    }
+
+    prepares_sim();
+
     // initial
     d3.select(chart.el)
       .selectAll('img.book')
@@ -21,7 +49,13 @@ function vis(data) {
       .classed('book', true)
       .style('left', 0)
       .style('top', 0)
-      .style('transform', (d,i) => `translate(${((i % nx) * book_w) + 'px'}, ${((Math.floor(i / nx) * book_h)) + 'px'})`)
+      .style('transform', (d,i) => {
+
+        d.x = (i % nx) * book_w;
+        d.y = (Math.floor(i / nx) * book_h);
+        
+        return `translate(${d.x}px, ${d.y}px)`
+      })
       //.style('left', (d,i) => ((i % nx) * book_w) + 'px' )
       //.style('top', (d,i) => ((Math.floor(i / nx) * book_h)) + 'px')
       .attr('src', d => '../imgs/' + d.filename)
@@ -45,9 +79,51 @@ function vis(data) {
 
     console.log(pagesTreemap, pagesTreemap.leaves());
 
-    const btn = document.querySelector('button');
-    btn.addEventListener('click', fire);
+
+    function update_positions() {
+
+        const l = 10;
+        const scale_x = l / book_w;
+        const scale_y = l / book_h;
+
+        d3.selectAll('img.book')
+          .style('transform', d => `translate(${d.x}px, ${d.y}px) scale(${scale_x}, ${scale_y})`)
+
+    }
+
+
+
+    function save_last_positions() {
+        console.log('uh.')
+    }
+
+
+    console.log(data);
+
+    const btns = document.querySelector('.controls');
+    btns.addEventListener('click', fire);
+
     function fire(e) {
+
+        if (e.target.tagName == 'BUTTON') {
+
+            const action = e.target.dataset.action;
+
+            if (action == 'treemap') transition_to_treemap();
+            if (action == 'squares') transition_to_squares();
+            if (action == 'force') transition_to_force();
+
+        } else {
+
+            console.log('no button no');
+
+        }
+
+          
+    }
+
+    function transition_to_treemap() {
+
         d3.selectAll('img.book')
           .transition()
           .delay((d,i) => (i % 8) * 100)
@@ -65,6 +141,10 @@ function vis(data) {
             const translate_x = book_data_from_hierarchy.x0;
             const translate_y = book_data_from_hierarchy.y0;
 
+            //update positions to sim parameters
+            d.x = translate_x;
+            d.y = translate_y;
+
             const scale_x = new_w / book_w;
             const scale_y = new_h / book_h;
 
@@ -74,13 +154,57 @@ function vis(data) {
 
             return `translate(${translate_x}px, ${translate_y}px) scale(${scale_x}, ${scale_y})`;
           })
-          /*
-          .style('left', (d,i) => pagesTreemap.children[i].x0 + 'px')
-          .style('top', (d,i) => pagesTreemap.children[i].y0 + 'px')
-          .style('width', (d,i) => `${pagesTreemap.children[i].x1 - pagesTreemap.children[i].x0}px`)
-          .style('height', (d,i) => `${pagesTreemap.children[i].y1 - pagesTreemap.children[i].y0}px`)
-          */
-          
+        ;
+
+    }
+
+    function transition_to_squares() {
+
+        const l = 10;
+
+        d3.selectAll('img.book')
+          .transition()
+          .delay((d,i) => (i % 8) * 100)
+          .duration(1000)
+          .style('transform', d => {
+
+            const scale_x = l / book_w;
+            const scale_y = l / book_h;
+
+            d.x = x(d.avgRating);
+            d.y = 300;
+
+            return `translate(${x(d.avgRating)}px, 300px) scale(${scale_x}, ${scale_y})`;
+
+          })
+
+    }
+
+    function transition_to_force() {
+
+        console.log('force!');
+
+        d3.selectAll('img.book')
+          .transition()
+          .delay((d,i) => (i % 8) * 40)
+          .duration(400)
+          .style('transform', d => {
+
+            const l = 10;
+
+            const scale_x = l / book_w;
+            const scale_y = l / book_h;
+
+            return `translate(${d.x}px, ${d.y}px) scale(${scale_x}, ${scale_y})`;
+
+          })
+
+        setTimeout( () => sim.alpha(1).restart(), 2000);
+
+    }
+
+    function updates_sim_param() {
+        data.forEach()
     }
 
 
