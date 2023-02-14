@@ -1,17 +1,17 @@
-fetch('../data.json').then(response => response.json()).then(vis)
+fetch('../data.json').then(response => response.json()).then(vis);
+
+// quantitative variables: numPages, avgRating, ratingsCount
+// ordinal variable : yearPublication
 
 function vis(data) {
 
     console.log(data);
 
-    const chart = new Chart('.vis-container', '.vis');
+    const chart = new Chart('.vis-container', '.vis', data);
 
-    console.log(chart.w);
+    console.log(chart);
 
-    const book_w = 40;
-    const book_h = 50;
-
-    const nx = Math.floor(chart.w / book_w);
+    const r = 4;
 
     const margin = 100;
     const x = d3.scaleLinear().range([margin/4, chart.w - margin]).domain([1,5]);
@@ -219,15 +219,57 @@ class Chart {
     w;
     h;
 
-    constructor(container, el) {
+    data;
+
+    margin = 100;
+
+    constructor(container, el, data) {
 
         this.container = container;
         this.el = el;
+        this.data = data;
+
         const cont = document.querySelector(container);
 
         this.w = window.getComputedStyle(cont).width.slice(0,-2);
         this.h = window.getComputedStyle(cont).height.slice(0,-2);
 
+        this.scalesParams.set(this);
+
+    }
+
+    scalesParams = { 
+        
+        ranges : {
+
+           x : null, 
+           y : null
+
+        },
+
+        domains : {
+
+            numPages : null,
+            avgRating : null,
+            ratingsCount : null,
+
+            year_publication : null
+
+        },
+
+        set(ref) {
+
+            const data = ref.data;
+
+            ref.scalesParams.domains.numPages = [0, Math.max( ...data.map(d => d.numPages) ) ];
+            ref.scalesParams.domains.ratingsCount = [0, Math.max( ...data.map(d => d.ratingsCount) ) ];
+            ref.scalesParams.domains.avgRating = [0, 5];
+            ref.scalesParams.domains.year_publication = d3.extent(data, d => d.year_publication);
+
+            ref.scalesParams.ranges.x = [ref.margin, ref.w - ref.margin];
+            ref.scalesParams.ranges.y = [ref.h - ref.margin, ref.margin];
+
+        }
     }
 
 }
