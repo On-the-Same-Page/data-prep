@@ -26,10 +26,10 @@ function vis(data) {
     
         sim
           //.velocityDecay(0.3)
-          .force('x', d3.forceX().strength(strength).x(d => x(d.avgRating)))
-          .force('y', d3.forceY().strength(strength/2).y(chart.h/2))
-          .force('collision', d3.forceCollide().strength(strength*2.5).radius(10))
-          //.alphaMin(0.1)
+          .force('x', d3.forceX().strength(strength*1.5).x(d => x(d.avgRating)))
+          .force('y', d3.forceY().strength(strength).y(chart.h/2))
+          .force('collision', d3.forceCollide().strength(strength*2.5).radius(5))
+          //.alphaMin(0.01)
           .on('tick', update_positions)
           .on('end', save_last_positions)
           .stop()
