@@ -166,7 +166,7 @@ class Chart {
 
     w;
     h;
-    r = 5;
+    r = 4;
 
     margin = 100;
 
@@ -319,7 +319,7 @@ class Simulation {
 
     chart_ref;
 
-    strength = 0.04;
+    strength = 0.06;
 
     constructor(data, chart) {
 
@@ -337,11 +337,11 @@ class Simulation {
         const strength = this.strength;
     
         this.sim
-          //.velocityDecay(0.3)
+          .velocityDecay(0.3)
           .force('x', d3.forceX().strength(strength/2).x(chart.w/2))
           .force('y', d3.forceY().strength(strength/2).y(chart.h/2))
-          .force('collision', d3.forceCollide().strength(strength*2).radius(chart.r))
-          //.alphaMin(0.01)
+          .force('collision', d3.forceCollide().strength(strength*4).radius(chart.r))
+          .alphaMin(0.05)
           .on('tick', this.update)
           .on('end', this.savePositions)
           .stop()
