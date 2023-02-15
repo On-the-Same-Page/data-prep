@@ -11,10 +11,17 @@
     width: 100%;
     height: 100%;
     border: 2px solid crimson;
-    position: relative;
 }
 
-img.book {
-    position: absolute;
-    transform-origin: 0 0;
+.book {
+    fill: hotpink;
+    stroke: white;
+}
+
+.vis:has(.book:hover) .book {
+    opacity: .3;
+}
+
+.vis:has(.book:hover) .book:hover {
+    opacity: 1;
 }

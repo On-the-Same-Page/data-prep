@@ -1,5 +1,10 @@
 fetch('../data.json').then(response => response.json()).then(vis);
 
+const cont = document.querySelector('.vis-container');
+let a = d3.select(cont);
+console.log(a);
+
+
 // quantitative variables: numPages, avgRating, ratingsCount
 // ordinal variable : yearPublication
 
@@ -8,93 +13,44 @@ function vis(data) {
     console.log(data);
 
     const chart = new Chart('.vis-container', '.vis', data);
+    const sim = new Simulation(data, chart);
 
     console.log(chart);
 
-    const r = 4;
-
-    const margin = 100;
-    const x = d3.scaleLinear().range([margin/4, chart.w - margin]).domain([1,5]);
-
-    // sim
-    const sim = d3.forceSimulation();
-    function prepares_sim() {
-
-        const strength = 0.04;
-    
-        let flag = false;
-    
-        sim
-          //.velocityDecay(0.3)
-          .force('x', d3.forceX().strength(strength*1.5).x(d => x(d.avgRating)))
-          .force('y', d3.forceY().strength(strength).y(chart.h/2))
-          .force('collision', d3.forceCollide().strength(strength*2.5).radius(5))
-          //.alphaMin(0.01)
-          .on('tick', update_positions)
-          .on('end', save_last_positions)
-          .stop()
-        ;
-
-        sim.nodes(data);
-    
-    }
-
-    prepares_sim();
-
-    // initial
-    d3.select(chart.el)
-      .selectAll('img.book')
-      .data(data)
-      .join('img')
-      .classed('book', true)
-      .style('left', 0)
-      .style('top', 0)
-      .style('transform', (d,i) => {
-
-        d.x = (i % nx) * book_w;
-        d.y = (Math.floor(i / nx) * book_h);
-        
-        return `translate(${d.x}px, ${d.y}px)`
-      })
-      //.style('left', (d,i) => ((i % nx) * book_w) + 'px' )
-      //.style('top', (d,i) => ((Math.floor(i / nx) * book_h)) + 'px')
-      .attr('src', d => '../imgs/' + d.filename)
-      .style('width', book_w + 'px')
-      .style('height', book_h + 'px')
-    ;
-
-    const data_sorted_numPages = [...data].sort((a,b) => b.numPages - a.numPages);
-    console.log(data_sorted_numPages);
-
-    const hierarc_data = {
-        children: data_sorted_numPages
-    }
-
-    const pagesTreemap = d3.treemap()
-      .tile(d3.treemapBinary)
-      .size([chart.w, chart.h])
-      .round(true)
-      (d3.hierarchy(hierarc_data).sum(d => d.numPages))
-    ;
-
-    console.log(pagesTreemap, pagesTreemap.leaves());
-
-
-    function update_positions() {
-
-        const l = 10;
-        const scale_x = l / book_w;
-        const scale_y = l / book_h;
-
-        d3.selectAll('img.book')
-          .style('transform', d => `translate(${d.x}px, ${d.y}px) scale(${scale_x}, ${scale_y})`)
-
-    }
-
-
+    sim.restart();
 
     function save_last_positions() {
         console.log('uh.')
+    }
+
+    function move1() {
+
+        chart.scales.set(chart, 'avgRating', 'y');
+        chart.scales.set(chart, 'year_publication', 'x');
+
+        const strength = sim.strength;
+
+        sim.sim
+        .force('x', d3.forceX().strength(strength/2).x(d => chart.scales.x(d.year_publication)))
+        .force('y', d3.forceY().strength(strength/2).y(d => chart.scales.y(d.avgRating)));
+
+        sim.restart();
+
+    }
+
+    function move2() {
+
+        chart.scales.set(chart, 'ratingsCount', 'y');
+        chart.scales.set(chart, 'year_publication', 'x');
+
+        const strength = sim.strength;
+
+        sim.sim
+        .force('x', d3.forceX().strength(strength/2).x(d => chart.scales.x(d.year_publication)))
+        .force('y', d3.forceY().strength(strength/2).y(d => chart.scales.y(d.ratingsCount)));
+
+        sim.restart();
+
     }
 
 
@@ -109,8 +65,8 @@ function vis(data) {
 
             const action = e.target.dataset.action;
 
-            if (action == 'treemap') transition_to_treemap();
-            if (action == 'squares') transition_to_squares();
+            if (action == 'force1') move1();
+            if (action == 'force2') move2();
             if (action == 'force') transition_to_force();
 
         } else {
@@ -182,24 +138,7 @@ function vis(data) {
 
     function transition_to_force() {
 
-        console.log('force!');
-
-        d3.selectAll('img.book')
-          .transition()
-          .delay((d,i) => (i % 8) * 40)
-          .duration(400)
-          .style('transform', d => {
-
-            const l = 10;
-
-            const scale_x = l / book_w;
-            const scale_y = l / book_h;
-
-            return `translate(${d.x}px, ${d.y}px) scale(${scale_x}, ${scale_y})`;
-
-          })
-
-        setTimeout( () => sim.alpha(1).restart(), 2000);
+        move();
 
     }
 
@@ -214,27 +153,60 @@ function vis(data) {
 
 class Chart {
 
-    container;
-    el;
+    ref_container;
+    ref_svg;
+
+    svg;
+
     w;
     h;
-
-    data;
+    r = 5;
 
     margin = 100;
 
-    constructor(container, el, data) {
+    data;
 
-        this.container = container;
-        this.el = el;
+    marks;
+
+    constructor(ref_container, ref_svg, data) {
+
+        this.ref_container = ref_container;
+        this.ref_svg = ref_svg;
         this.data = data;
 
-        const cont = document.querySelector(container);
+        const cont = document.querySelector(ref_container);
+        const svg = d3.select(ref_svg);
+        this.svg = svg;
 
         this.w = window.getComputedStyle(cont).width.slice(0,-2);
         this.h = window.getComputedStyle(cont).height.slice(0,-2);
 
+        svg.attr('viewBox', `0 0 ${this.w} ${this.h}`);
+
         this.scalesParams.set(this);
+
+        this.createMarks();
+
+    }
+
+    createMarks() {
+
+        this.marks = this.svg
+          .selectAll('circle.book')
+          .data(this.data)
+          .join('circle')
+          .classed('book', true)
+          .attr('cx', 0)
+          .attr('cy', 0)
+          .attr('r', this.r)
+          .attr('transform', d => {
+            
+            d.x = Math.random() * this.w;
+            d.y = Math.random() * this.h;
+            
+            return `translate(${d.x}, ${d.y})`
+          })
+        ;
 
     }
 
@@ -270,6 +242,76 @@ class Chart {
             ref.scalesParams.ranges.y = [ref.h - ref.margin, ref.margin];
 
         }
+    }
+
+    scales = {
+
+        x : d3.scaleLinear(),
+        y : d3.scaleLinear(),
+
+        set(ref, variable, dimension) {
+
+            ref.scales[dimension]
+              .range( ref.scalesParams.ranges[dimension])
+              .domain( ref.scalesParams.domains[variable])
+            ;
+
+        }
+    }
+
+}
+
+class Simulation {
+
+    sim;
+
+    chart_ref;
+
+    strength = 0.04;
+
+    constructor(data, chart) {
+
+        this.chart_ref = chart;
+        console.log(this.chart_ref);
+        
+        this.sim = d3.forceSimulation();
+        this.sim.nodes(data);
+        this.set(chart);
+
+    }
+
+    set(chart) {
+
+        const strength = this.strength;
+    
+        this.sim
+          //.velocityDecay(0.3)
+          .force('x', d3.forceX().strength(strength/2).x(chart.w/2))
+          .force('y', d3.forceY().strength(strength/2).y(chart.h/2))
+          .force('collision', d3.forceCollide().strength(strength*2).radius(chart.r))
+          //.alphaMin(0.01)
+          .on('tick', this.update)
+          .on('end', this.savePositions)
+          .stop()
+        ;
+    
+    }
+
+    update() {
+
+        const chart = this.chart_ref;
+
+        //console.log(chart);
+    
+        //chart.marks
+        d3.selectAll('.book')
+          .attr('transform', d => `translate(${d.x}, ${d.y})`)
+    }
+
+    restart() {
+
+        this.sim.alpha(1).restart()
+
     }
 
 }
