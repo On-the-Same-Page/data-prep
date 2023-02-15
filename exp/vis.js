@@ -28,6 +28,12 @@ function vis(data) {
         chart.scales.set(chart, 'avgRating', 'y');
         chart.scales.set(chart, 'year_publication', 'x');
 
+        if (!chart.axis.el_x) {
+            chart.axis.build(chart);
+        } else {
+            chart.axis.update(chart);
+        }
+
         const strength = sim.strength;
 
         sim.sim
@@ -42,6 +48,12 @@ function vis(data) {
 
         chart.scales.set(chart, 'ratingsCount', 'y');
         chart.scales.set(chart, 'year_publication', 'x');
+
+        if (!chart.axis.el_x) {
+            chart.axis.build(chart);
+        } else {
+            chart.axis.update(chart);
+        }
 
         const strength = sim.strength;
 
@@ -133,12 +145,6 @@ function vis(data) {
             return `translate(${x(d.avgRating)}px, 300px) scale(${scale_x}, ${scale_y})`;
 
           })
-
-    }
-
-    function transition_to_force() {
-
-        move();
 
     }
 
@@ -257,6 +263,52 @@ class Chart {
             ;
 
         }
+    }
+
+    axis = {
+
+        x: null,
+        y: null,
+
+        el_x: null,
+        el_y: null,
+
+        set(ref) {
+
+            ref.axis.x = d3.axisBottom(ref.scales.x);
+            ref.axis.y = d3.axisLeft(ref.scales.y);
+
+        },
+
+        build(ref) {
+
+            ref.axis.set(ref);
+
+            ref.axis.el_x = ref.svg.append('g')
+              .classed('axis', true)
+              .classed('axis-x', true)
+              .attr('transform', `translate(0,${ref.scalesParams.ranges.y[0]})`)
+              .call(ref.axis.x)
+            ;
+
+            ref.axis.el_y = ref.svg.append('g')
+              .classed('axis', true)
+              .classed('axis-y', true)
+              .attr('transform', `translate(${ref.margin}, 0)`)
+              .call(ref.axis.y)
+          ;
+
+        },
+
+        update(ref) {
+
+            ref.axis.set(ref);
+
+            ref.axis.el_x.transition().duration(500).call(ref.axis.x);
+            ref.axis.el_y.transition().duration(500).call(ref.axis.y);
+
+        }
+
     }
 
 }
