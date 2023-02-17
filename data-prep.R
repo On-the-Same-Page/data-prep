@@ -202,6 +202,8 @@ ggplot(top800) + geom_boxplot(aes(y = 1, x = numPages))
 ggplot(top800) + geom_boxplot(aes(y = 1, x = avgRating))
 ggplot(top800) + geom_boxplot(aes(y = 1, x = year_publication))
 
+ggplot(top800) + geom_point(aes(x = year_publication, y = ratingsCount))
+
 library(treemap)
 treemap(top800, index="title", vSize="numPages", type = "index")
 treemap(top800, index="title", vSize="ratingsCount", type = "index")
