@@ -13,6 +13,7 @@ function vis(data) {
     console.log(data);
 
     const chart = new Chart('.vis-container', '.vis', data);
+    const axis = new Axis(chart);
     const sim = new Simulation(data, chart);
 
     console.log(chart);
@@ -28,10 +29,10 @@ function vis(data) {
         chart.scales.set(chart, 'avgRating', 'y');
         chart.scales.set(chart, 'year_publication', 'x');
 
-        if (!chart.axis.el_x) {
-            chart.axis.build(chart);
+        if (!axis.el_x) {
+            axis.build(chart);
         } else {
-            chart.axis.update(chart);
+            axis.update(chart);
         }
 
         const strength = sim.strength;
@@ -49,10 +50,10 @@ function vis(data) {
         chart.scales.set(chart, 'ratingsCount', 'y');
         chart.scales.set(chart, 'year_publication', 'x');
 
-        if (!chart.axis.el_x) {
-            chart.axis.build(chart);
+        if (!axis.el_x) {
+            axis.build(chart);
         } else {
-            chart.axis.update(chart);
+            axis.update(chart);
         }
 
         const strength = sim.strength;
@@ -230,8 +231,17 @@ class Chart {
             numPages : null,
             avgRating : null,
             ratingsCount : null,
-
             year_publication : null
+
+        },
+
+        variables : {
+
+            numPages : "Page count",
+            avgRating : "Average rating",
+            ratingsCount : "Number of ratings",
+            year_publication : "Publication Year"
+
 
         },
 
@@ -265,49 +275,49 @@ class Chart {
         }
     }
 
-    axis = {
+}
 
-        x: null,
-        y: null,
+class Axis {
 
-        el_x: null,
-        el_y: null,
+    x = null;
+    y = null;
 
-        set(ref) {
+    el_x = null;
+    el_y = null;
 
-            ref.axis.x = d3.axisBottom(ref.scales.x);
-            ref.axis.y = d3.axisLeft(ref.scales.y);
+    set(chart) {
 
-        },
+        this.x = d3.axisBottom(chart.scales.x);
+        this.y = d3.axisLeft(chart.scales.y);
 
-        build(ref) {
+    }
 
-            ref.axis.set(ref);
+    build(chart) {
 
-            ref.axis.el_x = ref.svg.append('g')
-              .classed('axis', true)
-              .classed('axis-x', true)
-              .attr('transform', `translate(0,${ref.scalesParams.ranges.y[0]})`)
-              .call(ref.axis.x)
-            ;
+        this.set(chart);
 
-            ref.axis.el_y = ref.svg.append('g')
-              .classed('axis', true)
-              .classed('axis-y', true)
-              .attr('transform', `translate(${ref.margin}, 0)`)
-              .call(ref.axis.y)
-          ;
+        this.el_x = chart.svg.append('g')
+            .classed('axis', true)
+            .classed('axis-x', true)
+            .attr('transform', `translate(0,${chart.scalesParams.ranges.y[0]})`)
+            .call(this.x)
+        ;
 
-        },
+        this.el_y = chart.svg.append('g')
+            .classed('axis', true)
+            .classed('axis-y', true)
+            .attr('transform', `translate(${chart.margin}, 0)`)
+            .call(this.y)
+        ;
 
-        update(ref) {
+    }
 
-            ref.axis.set(ref);
+    update(chart) {
 
-            ref.axis.el_x.transition().duration(500).call(ref.axis.x);
-            ref.axis.el_y.transition().duration(500).call(ref.axis.y);
+        this.set(chart);
 
-        }
+        this.el_x.transition().duration(500).call(this.x);
+        this.el_y.transition().duration(500).call(this.y);
 
     }
 
