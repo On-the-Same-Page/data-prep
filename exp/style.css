@@ -2,9 +2,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --chart-margin: 100px;
+}
+
 .vis-container {
     width: 100%;
     height: calc(100vh - 16px);
+    position: relative;
 }
 
 .vis {
@@ -24,4 +29,21 @@
 
 .vis:has(.book:hover) .book:hover {
     opacity: 1;
+}
+
+/* variables selectors */
+.variable-selector {
+    position: absolute;
+}
+
+.variable-selector#sel-y-variable {
+    left: var(--chart-margin);
+    top: calc(var(--chart-margin) - 1em);
+    transform: translate(0,-100%);
+}
+
+.variable-selector#sel-x-variable {
+    right: var(--chart-margin);
+    bottom: calc(var(--chart-margin) - 2em);
+    transform: translate(0,100%);
 }
