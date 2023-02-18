@@ -130,6 +130,7 @@ class Chart {
           .data(this.data)
           .join('circle')
           .classed('book', true)
+          .classed('no-force', true)
           .attr('cx', 0)
           .attr('cy', 0)
           .attr('r', this.r)

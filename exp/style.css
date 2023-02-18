@@ -5,6 +5,7 @@
 :root {
 
     --chart-margin: 100px;
+    --r : 3;
 
     --text-color: #444;
     --bkg-color: BlanchedAlmond;
@@ -33,11 +34,13 @@
 .book {
     fill: hotpink;
     stroke: var(--bkg-color);
+    opacity: .7;
 }
 
 .book.no-force {
     transition: transform .8s;
 }
+
 
 .vis:has(.book:hover) .book {
     opacity: .3;
@@ -48,8 +51,13 @@
 }
 
 /* variable selectors */
+
 .variable-selector {
     position: absolute;
+    padding: .5em .3em;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid currentColor;
 }
 
 .variable-selector#sel-y-variable {
@@ -62,6 +70,7 @@
     right: var(--chart-margin);
     bottom: calc(var(--chart-margin) - 2em);
     transform: translate(0,100%);
+    text-align: right;
 }
 
 /* genres-filter */
