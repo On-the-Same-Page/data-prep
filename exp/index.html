@@ -9,12 +9,17 @@
 </head>
 <body>
 
-    <div class="controls">
-        <button data-action="force1">force1</button>
-        <button data-action="force2">force2</button>
-    </div>
-
     <div class="vis-container">
+        <div class="filter-genres">
+            <button data-genre="Fantasy">Fantasy</button>
+            <button data-genre="Mistery">Mistery</button>
+            <button data-genre="Thriller">Thriller</button>
+            <button data-genre="Romance">Romance</button>
+        </div>
+        <button class="use-the-force">
+            <img src="force.png" alt="Yoda using the force">
+            Use the force!
+        </button>
         <svg class="vis"></svg>
         <select class="variable-selector" name="y_variable" id="sel-y-variable">
             <option value="initial">Select a variable for the Y axis!</option>

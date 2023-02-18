@@ -13,7 +13,7 @@ function vis(data) {
     console.log(data);
 
     const chart = new Chart('.vis-container', '.vis', data);
-    const sim = new Simulation(data, chart);
+    const sim = new Simulation(data, chart, '.use-the-force');
     const axis = new Axis(chart, sim);
 
     console.log(chart);
@@ -69,27 +69,6 @@ function vis(data) {
 
     console.log(data);
 
-    const btns = document.querySelector('.controls');
-    btns.addEventListener('click', fire);
-
-    function fire(e) {
-
-        if (e.target.tagName == 'BUTTON') {
-
-            const action = e.target.dataset.action;
-
-            if (action == 'force1') move1();
-            if (action == 'force2') move2();
-            if (action == 'force') transition_to_force();
-
-        } else {
-
-            console.log('no button no');
-
-        }
-
-          
-    }
 
     function transition_to_treemap() {
 
@@ -421,7 +400,13 @@ class Simulation {
 
     strength = 0.06;
 
-    constructor(data, chart) {
+    button_ref = null;
+    button_el = null;
+
+    constructor(data, chart, button_ref) {
+
+        this.button_el = document.querySelector(button_ref);
+        this.button_monitor();
 
         this.chart_ref = chart;
         console.log(this.chart_ref);
@@ -471,6 +456,18 @@ class Simulation {
         this.sim.stop();
 
     }
+
+    button_monitor() {
+
+        this.button_el.addEventListener('click', e => this.button_handler(e, this));
+
+    }
+
+    button_handler(e) {
+
+        this.button_el.classList.toggle('clicked');
+
+    } 
 
 }
 

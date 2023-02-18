@@ -3,7 +3,19 @@
 }
 
 :root {
+
     --chart-margin: 100px;
+
+    --text-color: #444;
+    --bkg-color: BlanchedAlmond;
+
+    --color1: #ffd700;
+    --color2: #fa8775;
+    --color3: #ea5f94;
+    --color4: #9d02d7;
+
+    color: var(--text-color);
+    background-color: var(--bkg-color);
 }
 
 .vis-container {
@@ -20,7 +32,7 @@
 
 .book {
     fill: hotpink;
-    stroke: white;
+    stroke: var(--bkg-color);
 }
 
 .book.no-force {
@@ -35,7 +47,7 @@
     opacity: 1;
 }
 
-/* variables selectors */
+/* variable selectors */
 .variable-selector {
     position: absolute;
 }
@@ -51,3 +63,80 @@
     bottom: calc(var(--chart-margin) - 2em);
     transform: translate(0,100%);
 }
+
+/* genres-filter */
+
+div.filter-genres {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+div.filter-genres > button + button {
+    margin-left: 1rem;
+}
+
+button[data-genre],
+button.use-the-force {
+
+    border: 2px solid var(--text-color);
+    border-radius: 1em;
+    padding: .4em .6em;
+    background-color: var(--bkg-color);
+
+}
+
+button.use-the-force {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-origin: center center;
+}
+button.use-the-force img {
+    width: 50px;
+}
+
+button.use-the-force.clicked {
+    /*--spread-radius: 5;*/
+    box-shadow: 0 0 20px var(--spread-radius) gold;
+    animation: shake .4s infinite, shine .8s infinite;
+}
+
+@keyframes shake {
+
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+        
+    }
+    
+}
+
+@keyframes shine {
+
+    0% {
+        --spread-radius: 5px;
+    }
+
+    50% {
+        --spread-radius: 10px;
+    }
+
+    100% {
+        --spread-radius: 5px;
+    }
+
+}
+
