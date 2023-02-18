@@ -285,6 +285,24 @@ class Axis {
     el_x = null;
     el_y = null;
 
+    current_variable_x = null;
+    current_variable_y = null;
+
+    selector_variable_x = "#sel-x-variable";
+    selector_variable_y = "#sel-y-variable";
+
+    el_sel_x = null;
+    el_sel_y = null;
+
+    constructor(chart) {
+
+        this.el_sel_x = document.querySelector(this.selector_variable_x);
+        this.el_sel_y = document.querySelector(this.selector_variable_y);
+
+        this.populate_selectors(chart);
+
+    }
+
     set(chart) {
 
         this.x = d3.axisBottom(chart.scales.x);
@@ -320,6 +338,34 @@ class Axis {
         this.el_y.transition().duration(500).call(this.y);
 
     }
+
+    populate_selectors(chart) {
+
+        const variables = chart.scalesParams.variables;
+        const variables_list = Object.keys(variables);
+
+        variables_list.forEach((variable, axis) => {
+
+            const new_option_x = document.createElement('option');
+
+            new_option_x.value = variable;
+            new_option_x.innerText = variables[variable];
+
+            this.el_sel_x.appendChild(new_option_x);
+
+
+            const new_option_y = document.createElement('option');
+
+            new_option_y.value = variable;
+            new_option_y.innerText = variables[variable];
+
+            this.el_sel_y.appendChild(new_option_y);
+
+        })
+
+    }
+
+
 
 }
 
