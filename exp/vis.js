@@ -20,55 +20,7 @@ function vis(data) {
 
     sim.restart();
 
-    function save_last_positions() {
-        console.log('uh.')
-    }
-
-    function move1() {
-
-        chart.scales.set(chart, 'avgRating', 'y');
-        chart.scales.set(chart, 'year_publication', 'x');
-
-        if (!axis.el_x) {
-            axis.build(chart);
-        } else {
-            axis.update(chart);
-        }
-
-        const strength = sim.strength;
-
-        sim.sim
-        .force('x', d3.forceX().strength(strength/2).x(d => chart.scales.x(d.year_publication)))
-        .force('y', d3.forceY().strength(strength/2).y(d => chart.scales.y(d.avgRating)));
-
-        sim.restart();
-
-    }
-
-    function move2() {
-
-        chart.scales.set(chart, 'ratingsCount', 'y');
-        chart.scales.set(chart, 'year_publication', 'x');
-
-        if (!axis.el_x) {
-            axis.build(chart);
-        } else {
-            axis.update(chart);
-        }
-
-        const strength = sim.strength;
-
-        sim.sim
-        .force('x', d3.forceX().strength(strength/2).x(d => chart.scales.x(d.year_publication)))
-        .force('y', d3.forceY().strength(strength/2).y(d => chart.scales.y(d.ratingsCount)));
-
-        sim.restart();
-
-    }
-
-
     console.log(data);
-
 
     function transition_to_treemap() {
 
@@ -127,13 +79,6 @@ function vis(data) {
           })
 
     }
-
-    function updates_sim_param() {
-        data.forEach()
-    }
-
-
-
 
 }
 
