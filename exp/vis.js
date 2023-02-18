@@ -14,6 +14,7 @@ function vis(data) {
 
     // make all this instances part of the state object;
     const chart = new Chart('.vis-container', '.vis', data);
+    state.ref_to_chart = chart;
     const sim = new Simulation(data, chart, '.use-the-force');
     state.ref_to_sim = sim;
     const axis = new Axis(chart, sim);
@@ -121,6 +122,8 @@ class Chart {
 
         this.createMarks();
 
+        //this.monitorHover();
+
     }
 
     createMarks() {
@@ -142,6 +145,46 @@ class Chart {
             return `translate(${d.x}, ${d.y})`
           })
         ;
+
+    }
+
+    monitorHover() {
+
+        this.marks
+          .on('mouseover', this.showTooltip)
+          .on('mouseout',  this.hideTooltip);
+
+    }
+
+    showTooltip(e) {
+
+        console.log(e);
+
+        const x = e.x;
+        const y = e.y;
+
+        const data = e.target.__data;
+
+        const tt = document.querySelector('.tooltip-hover');
+
+        tt.querySelectorAll('[data-tt-hover-info]').forEach(el => {
+
+            const info = el.dataset.ttHoverInfo;
+
+            if (info.substr(0,13) == 'variable-name') {
+
+
+            } else {
+
+                el.innerText = data[info];
+
+            }
+            
+
+        })
+
+        
+
 
     }
 
@@ -374,11 +417,11 @@ class Simulation {
         const strength = this.strength;
     
         this.sim
-          .velocityDecay(0.3)
+          .velocityDecay(0.2)
           .force('x', d3.forceX().strength(strength/2).x(chart.w/2))
           .force('y', d3.forceY().strength(strength/2).y(chart.h/2))
           .force('collision', d3.forceCollide().strength(strength*4).radius(chart.r))
-          .alphaMin(0.05)
+          .alphaMin(0.25)//.alphaMin(0.05)
           .on('tick', this.update)
           .on('end', this.savePositions)
           .stop()
@@ -431,7 +474,8 @@ const state = {
     y_variable : null,
     force : false,
     ref_to_axis : null,
-    ref_to_sim : null
+    ref_to_sim : null,
+    ref_to_chart : null
 }
 
 function render(chart, axis, y_variable, x_variable, force = false) {

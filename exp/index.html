@@ -5,29 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="vis-container">
-        <div class="filter-genres">
-            <button data-genre="Fantasy">Fantasy</button>
-            <button data-genre="Mistery">Mistery</button>
-            <button data-genre="Thriller">Thriller</button>
-            <button data-genre="Romance">Romance</button>
+        <div class="top-controls">
+
+            <select class="variable-selector" name="y_variable" id="sel-y-variable">
+                <option value="initial">Select a variable for the Y axis!</option>
+            </select>
+
+            <div class="filter-genres">
+                <button data-genre="Fantasy">Fantasy</button>
+                <button data-genre="Mistery">Mistery</button>
+                <button data-genre="Thriller">Thriller</button>
+                <button data-genre="Romance">Romance</button>
+            </div>
+
         </div>
+
         <button class="use-the-force">
             <img src="force.png" alt="Yoda using the force">
             Use the force!
         </button>
+
         <svg class="vis"></svg>
-        <select class="variable-selector" name="y_variable" id="sel-y-variable">
-            <option value="initial">Select a variable for the Y axis!</option>
-        </select>
+
         <select class="variable-selector" name="x_variable" id="sel-x-variable">
             <option value="initial">Select a variable for the X axis!</option>
 
         </select>
+
+        <div class="tooltip-hover hidden">
+            <p data-tt-hover-info="title"></p>
+            <p data-tt-hover-info="authors_list"></p>
+            <p data-tt-hover-info="variable-name-x"></p>
+            <p data-tt-hover-info="variable-value-x"></p>
+            <p data-tt-hover-info="variable-name-y"></p>
+            <p data-tt-hover-info="variable-value-y"></p>
+        </div>
     </div>
 
 
