@@ -12,9 +12,12 @@ function vis(data) {
 
     console.log(data);
 
+    // make all this instances part of the state object;
     const chart = new Chart('.vis-container', '.vis', data);
     const sim = new Simulation(data, chart, '.use-the-force');
+    state.ref_to_sim = sim;
     const axis = new Axis(chart, sim);
+    state.ref_to_axis = axis;
 
     console.log(chart);
 
@@ -320,6 +323,9 @@ class Axis {
         //console.log('x_', axis.x_variable, ', y_: ', axis.y_variable, ', ', axis.x_variable && axis.y_variable);
 
         if (axis.x_variable && axis.y_variable) {
+
+            state.x_variable = axis.x_variable;
+            state.y_variable = axis.y_variable;
             
             render(axis.ref_to_chart, axis, axis.y_variable, axis.x_variable, axis.ref_to_sim.force_is_on);
 
@@ -411,12 +417,23 @@ class Simulation {
     button_handler(e) {
 
         this.button_el.classList.toggle('clicked');
+        this.force_is_on = !this.force_is_on;
+        state.force = !state.force;
+        render(this.chart_ref, state.ref_to_axis, state.y_variable, state.x_variable, state.force);
 
     } 
 
 }
 
-function render(chart, axis, y_variable, x_variable, sim = false) {
+const state = {
+    x_variable : null,
+    y_variable : null,
+    force : false,
+    ref_to_axis : null,
+    ref_to_sim : null
+}
+
+function render(chart, axis, y_variable, x_variable, force = false) {
 
     console.log('me chamaram?');
 
@@ -430,7 +447,7 @@ function render(chart, axis, y_variable, x_variable, sim = false) {
         axis.update(chart);
     }
 
-    if (!sim) {
+    if (!force) {
 
         axis.ref_to_sim.stop();
 
@@ -453,14 +470,16 @@ function render(chart, axis, y_variable, x_variable, sim = false) {
         chart.marks
           .classed('no-force', false);
 
-        const strength = sim.strength;
+        const strength = state.ref_to_sim.strength;
 
-        sim.sim
+        //console.log(sim);
+
+        state.ref_to_sim.sim
           .force('x', d3.forceX().strength(strength/2).x(d => chart.scales.x(d[x_variable])))
           .force('y', d3.forceY().strength(strength/2).y(d => chart.scales.y(d[y_variable])))
         ;
       
-        sim.restart();
+        state.ref_to_sim.restart();
 
     }
 
