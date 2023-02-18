@@ -23,6 +23,10 @@
     stroke: white;
 }
 
+.book.no-force {
+    transition: transform .8s;
+}
+
 .vis:has(.book:hover) .book {
     opacity: .3;
 }

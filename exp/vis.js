@@ -13,8 +13,8 @@ function vis(data) {
     console.log(data);
 
     const chart = new Chart('.vis-container', '.vis', data);
-    const axis = new Axis(chart);
     const sim = new Simulation(data, chart);
+    const axis = new Axis(chart, sim);
 
     console.log(chart);
 
@@ -279,6 +279,9 @@ class Chart {
 
 class Axis {
 
+    ref_to_chart = null;
+    ref_to_sim = null;
+
     x = null;
     y = null;
 
@@ -294,12 +297,19 @@ class Axis {
     el_sel_x = null;
     el_sel_y = null;
 
-    constructor(chart) {
+    x_variable = null;
+    y_variable = null;
+
+    constructor(chart, sim) {
+
+        this.ref_to_chart = chart;
+        this.ref_to_sim = sim;
 
         this.el_sel_x = document.querySelector(this.selector_variable_x);
         this.el_sel_y = document.querySelector(this.selector_variable_y);
 
         this.populate_selectors(chart);
+        this.monitor_changes();
 
     }
 
@@ -365,6 +375,38 @@ class Axis {
 
     }
 
+    monitor_changes() {
+
+        this.el_sel_x.addEventListener('change', e => this.change_axis_variable(e, this));
+        this.el_sel_y.addEventListener('change', e => this.change_axis_variable(e, this));
+
+    }
+
+    change_axis_variable(e, axis) {
+
+        const visual_variable = e.target.name;
+        //y_variable, x_variable
+        const data_variable = e.target.value;
+        //avgRating, numPages etc.
+
+        axis[visual_variable] = data_variable;
+
+        e.target.querySelector('[value="initial"]').disabled = true;
+
+        //console.log('x_', axis.x_variable, ', y_: ', axis.y_variable, ', ', axis.x_variable && axis.y_variable);
+
+        if (axis.x_variable && axis.y_variable) {
+            
+            render(axis.ref_to_chart, axis, axis.y_variable, axis.x_variable, axis.ref_to_sim.force_is_on);
+
+        }
+
+
+
+        console.log(visual_variable, data_variable);
+
+    }
+
 
 
 }
@@ -372,6 +414,8 @@ class Axis {
 class Simulation {
 
     sim;
+
+    force_is_on = false;
 
     chart_ref;
 
@@ -419,6 +463,62 @@ class Simulation {
     restart() {
 
         this.sim.alpha(1).restart()
+
+    }
+
+    stop() {
+
+        this.sim.stop();
+
+    }
+
+}
+
+function render(chart, axis, y_variable, x_variable, sim = false) {
+
+    console.log('me chamaram?');
+
+    // include test to avoid setting up and updating even when the axis are unchanged?
+    chart.scales.set(chart, x_variable, 'x');
+    chart.scales.set(chart, y_variable, 'y');
+
+    if (!axis.el_x && !axis.el_y) {
+        axis.build(chart);
+    } else {
+        axis.update(chart);
+    }
+
+    if (!sim) {
+
+        axis.ref_to_sim.stop();
+
+        chart.marks
+          .classed('no-force', true)
+          .attr('transform', d => {
+
+            // updating d.x and d.y so that there's no jump when alternating between 
+            // force movement and transition movement
+            
+            d.x = chart.scales['x'](d[x_variable])
+            d.y = chart.scales['y'](d[y_variable])
+            
+            return `translate(${d.x}, ${d.y})`
+
+          })
+
+    } else {
+
+        chart.marks
+          .classed('no-force', false);
+
+        const strength = sim.strength;
+
+        sim.sim
+          .force('x', d3.forceX().strength(strength/2).x(d => chart.scales.x(d[x_variable])))
+          .force('y', d3.forceY().strength(strength/2).y(d => chart.scales.y(d[y_variable])))
+        ;
+      
+        sim.restart();
 
     }
 
