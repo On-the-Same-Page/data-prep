@@ -6,3 +6,29 @@ Additional data was "scrapped" from the list webpages, using [javascript code](/
 
 check ratings x ranking as ranking decreases (and have fewer votes)
 
+get_book_covers.R
+
+To convert the sizes, with magick:
+
+```bash
+for filename in ./*.jpg
+do
+    convert "${filename}" -resize 200 "size200/${filename}"
+done
+```
+
+We used R, instead.
+
+
+private _genreClickedOver$ = new BehaviorSubject<Nullable<Selection>>(null);
+
+public get clickedOverGenre$(): Observable<Nullable<Selection>> {
+    return this._genreClickedOver$.asObservable();
+}
+
+to-do:
+
+* font adjustments para telas grandes, mudar o que tiver como pixels para rem;
+* usar o raio maior para telas maiores
+
+

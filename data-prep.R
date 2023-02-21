@@ -190,22 +190,66 @@ ggplot(data_genres, aes(x = avgRating, y = Fantasy)) +
   theme_charts
 
 
-# top 800 -----------------------------------------------------------------
+# top 1000 -----------------------------------------------------------------
 
-top800 <- data_clean %>% filter(rank <= 800)
+top1000 <- data_clean %>% filter(rank <= 1000)
 
 covers <- readRDS('img-filenames-table.rds')
 
-top800 <- top800 %>% left_join(covers) %>% filter(!is.na(filename))
+top1000 <- top1000 %>% left_join(covers) %>% filter(!is.na(filename))
 
-ggplot(top800) + geom_boxplot(aes(y = 1, x = numPages))
-ggplot(top800) + geom_boxplot(aes(y = 1, x = avgRating))
-ggplot(top800) + geom_boxplot(aes(y = 1, x = year_publication))
+ggplot(top1000) + geom_boxplot(aes(y = 1, x = numPages))
+ggplot(top1000) + geom_boxplot(aes(y = 1, x = avgRating))
+ggplot(top1000) + geom_boxplot(aes(y = 1, x = year_publication))
 
-ggplot(top800) + geom_point(aes(x = year_publication, y = ratingsCount))
+ggplot(top1000) + geom_point(aes(x = year_publication, y = ratingsCount))
 
 library(treemap)
-treemap(top800, index="title", vSize="numPages", type = "index")
-treemap(top800, index="title", vSize="ratingsCount", type = "index")
+treemap(top1000, index="title", vSize="numPages", type = "index")
+treemap(top1000, index="title", vSize="ratingsCount", type = "index")
 
-jsonlite::write_json(top800, path = 'data.json')
+
+# opening - grid ----------------------------------------------------------
+
+library(readxl)
+grid <- read_excel('OntheSamePAge-grid-butchered.xlsx') %>%
+  as.data.frame()
+
+positions <- data.frame()
+n <- 0
+
+for (i in 1:nrow(grid)) {
+  
+  for (j in 1:ncol(grid)) {
+    
+    if (!is.na(grid[i,j])) {
+      
+      positions[n+1, 'n'] <- n
+      positions[n+1, 'pos_i'] <- j - 1
+      positions[n+1, 'pos_j'] <- i - 1
+      n <- n + 1
+      
+    }
+  }
+}
+
+max_j <- max(positions$pos_j)
+
+#ggplot(positions, aes(x = pos_i, y = max_j-pos_j)) + geom_point()
+
+book_covers_files <- dir('./imgs/')
+
+data_with_covers <- top1000 %>%
+  filter(filename %in% book_covers_files) %>%
+  arrange(rank) %>%
+  filter(row_number() <= nrow(positions)) # (1)
+# --
+# (1) Getting only the first n books, where n is the number of "pixels" that were necessary to create the "On the Same Page" art
+
+
+data_with_covers$pos_i <- positions$pos_i
+data_with_covers$pos_j <- positions$pos_j
+
+
+write_rds(data_with_covers, 'data_with_covers.rds')
+jsonlite::write_json(data_with_covers, path = 'data.json')
