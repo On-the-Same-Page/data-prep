@@ -31,4 +31,11 @@ to-do:
 * font adjustments para telas grandes, mudar o que tiver como pixels para rem;
 * usar o raio maior para telas maiores
 
+* usar outras listas de livros
+* opcao de explorar listas de awards, vencedores (Pullitzer, Booker etc.)
+* https://www.goodreads.com/award/show/16-pulitzer-prize
+* boolean variables for main awards
+
+
+
 
