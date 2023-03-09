@@ -28,6 +28,7 @@ function trigger_tooltips() {
 
 }
 
+//before the first time:
 //localStorage.setItem('out', [])
 
 function get_data() {
@@ -43,8 +44,9 @@ function get_data() {
         const info = book.querySelector('.bookRatingAndPublishing').innerText;
         const score = book.querySelector('[onclick*="score_explanation"]').innerText;
         const votes = book.querySelector('[id*="loading_link"]').innerText;
+        const single_author = book.querySelector('.authorName [itemprop="name"]').innerText;
 
-        return { url, rank, info, score, votes }
+        return { url, rank, info, score, votes, single_author }
 
     })
 
