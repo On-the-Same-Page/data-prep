@@ -4,6 +4,11 @@ library(jsonlite)
 library(extrafont)
 loadfonts()
 
+theme_charts <- theme_minimal() +
+  theme(
+    text = element_text(family = 'Fira Code')
+  )
+
 raw <- stream_in(file('./raw-data/books.jl'))
 
 additional_data_raw <- jsonify::from_json('additional-data.json')
@@ -100,7 +105,7 @@ super_data <- list()
 generate_mini_dataset_genre <- function(genre) {
   
   df <- data_clean %>% 
-    filter(.data[[genre]]) %>% select(avgRating, numPages, ratingsCount) %>%
+    filter(.data[[genre]]) %>% select(avgRating, numPages, ratingsCount, year_publication) %>%
     mutate(genre = genre)
   print(genre)
   print(tail(df))
@@ -113,27 +118,44 @@ super_data <- purrr::map(list_of_genres, generate_mini_dataset_genre)
 
 super_df <- bind_rows(super_data)
 
-ggplot(super_df, aes(x = numPages, y = genre, color = genre)) + 
+ggplot(super_df, aes(x = avgRating, y = genre, color = genre)) + 
   ggbeeswarm::geom_quasirandom(groupOnX = FALSE, alpha = .4, shape = 16) +
   geom_boxplot(color = 'black', fill = 'transparent') + 
-  scale_x_continuous(limits = c(0, 2000)) +
-  labs(y = NULL) +
+  #scale_x_continuous(limits = c(0, 2000)) +
+  labs(y = NULL, x = 'Average Rating') +
   theme_charts + theme(legend.position = 'none')
 
 ggplot(super_df, aes(x = numPages, y = genre, color = genre)) + 
   ggbeeswarm::geom_quasirandom(groupOnX = FALSE, alpha = .4, shape = 16) +
   geom_boxplot(color = 'black', fill = 'transparent') + 
   scale_x_continuous(limits = c(0, 2000)) +
-  labs(y = NULL) +
+  labs(y = NULL, x = 'Number of Pages') +
   theme_charts + theme(legend.position = 'none')
 
+ggplot(super_df, aes(x = ratingsCount, y = genre, color = genre)) + 
+  ggbeeswarm::geom_quasirandom(groupOnX = FALSE, alpha = .4, shape = 16) +
+  geom_boxplot(color = 'black', fill = 'transparent') + 
+  scale_x_log10() +
+  labs(y = NULL, x = 'Number of ratings (log)') +
+  theme_charts + theme(legend.position = 'none')
+
+ggplot(super_df, aes(x = year_publication, y = genre, color = genre)) + 
+  ggbeeswarm::geom_quasirandom(groupOnX = FALSE, alpha = .4, shape = 16) +
+  geom_boxplot(color = 'black', fill = 'transparent') + 
+  scale_x_continuous(limits = c(1970,NA)) +
+  labs(y = NULL, x = 'Publication year') +
+  theme_charts + theme(legend.position = 'none')
+
+genres_summary <- super_df %>%
+  count(genre, year_publication)
+
+ggplot(genres_summary, aes(x = year_publication, y = n, fill = genre)) + geom_col() +
+  scale_x_continuous(limits = c(1900,NA)) +
+  facet_wrap(~genre) +
+  labs(x = "Publication year", y = "Number of books") +
+  theme_charts + theme(legend.position = 'none')
 
 # Exploration -------------------------------------------------------------
-
-theme_charts <- theme_minimal() +
-  theme(
-    text = element_text(family = 'Fira Code')
-  )
 
 ggplot(genres_count %>% filter(pct >= .05),
        aes(x = pct, y = reorder(genres, n))) + 
@@ -150,19 +172,33 @@ ggplot(genres_count %>% filter(pct >= .05),
 ggplot(data_genres %>% filter(rank <= 1000), aes(x = ratingsCount, y = numPages)) + geom_point(alpha = .3, shape = 16) +
   theme_charts
 
-ggplot(data_genres %>% filter(#rank <= 1000, 
-  year_publication >= 1900), aes(y = ratingsCount, x = year_publication)) + 
-  geom_point(alpha = .3, shape = 16, color = 'hotpink') +
-  scale_y_log10(labels = scales::comma_format(big.mark = '.')) +
-  labs(x = "Year of publication", title = 'Number of ratings for each book according with the year of publication',
+ggplot(data_genres, aes(x = ratingsCount)) + 
+  geom_histogram(fill = "goldenrod", bins = 100) +
+  scale_x_log10() +
+  labs(x = "Number of ratings (log)", title = 'Distribution of the books according to the number of ratings',
+       y = NULL) +
+  theme_charts
+
+ggplot(data_genres, aes(x = year_publication)) + 
+  geom_histogram(fill = "goldenrod", binwidth = 1) +
+  scale_x_continuous(limits = c(1900,NA)) +
+  labs(x = "Publication year", title = 'Distribution of the books according to publication year',
        y = NULL, subtitle = 'Considering only books published after 1900') +
   theme_charts
 
 ggplot(data_genres %>% filter(#rank <= 1000, 
-  year_publication >= 1900), aes(y = numPages, x = year_publication)) + 
-  geom_point(alpha = .3, shape = 16, color = 'hotpink') +
+  year_publication >= 1900), aes(y = ratingsCount, x = year_publication)) + 
+  geom_point(alpha = .4, shape = 16, color = 'hotpink') +
   scale_y_log10(labels = scales::comma_format(big.mark = '.')) +
-  labs(x = "Year of publication", title = 'Number of ratings for each book according with the year of publication',
+  labs(x = "Year of publication", title = 'Number of ratings for each book according to the year of publication',
+       y = "Number of ratings (log)", subtitle = 'Considering only books published after 1900') +
+  theme_charts
+
+ggplot(data_genres %>% filter(#rank <= 1000, 
+  year_publication >= 1900), aes(y = numPages, x = year_publication)) + 
+  geom_point(alpha = .4, shape = 16, color = 'hotpink') +
+  scale_y_log10(labels = scales::comma_format(big.mark = '.')) +
+  labs(x = "Year of publication", title = 'Number of pages x year of publication',
        y = NULL, subtitle = 'Considering only books published after 1900') +
   theme_charts
 
@@ -170,8 +206,16 @@ ggplot(data_genres %>% filter(#rank <= 1000,
   year_publication >= 1900), aes(y = avgRating, x = year_publication)) + 
   geom_point(alpha = .3, shape = 16, color = 'hotpink') +
   scale_y_continuous(labels = scales::comma_format(big.mark = '.'), limits = c(1,5)) +
-  labs(x = "Year of publication", title = 'Average rating for each book according with the year of publication',
+  labs(x = "Year of publication", title = 'Average rating for each book according to the year of publication',
        y = NULL, subtitle = 'Considering only books published after 1900') +
+  theme_charts
+
+ggplot(data_genres, aes(y = avgRating, x = ratingsCount)) + 
+  geom_point(alpha = .4, shape = 16, color = 'hotpink') +
+  scale_y_continuous(labels = scales::comma_format(big.mark = '.'), limits = c(1,5)) +
+  scale_x_log10() +
+  labs(x = "Number of ratings (log)", title = 'Average rating for each book according to the number of ratings',
+       y = NULL) +
   theme_charts
 
 ggplot(data_genres %>% filter(#rank <= 1000, 
@@ -190,13 +234,72 @@ ggplot(data_genres, aes(x = avgRating, y = Fantasy)) +
   theme_charts
 
 
+
+# awards ------------------------------------------------------------------
+
+data_awards <- data_clean
+
+awards_of_interest <- c('Pulitzer', 'Booker', 'Hugo', 'Nebula', 'National Book Award')
+
+for (award in awards_of_interest) {
+  data_awards[,award] = str_detect(data_awards$awards_list, award)
+}
+
+genre_buttons <- c('Science Fiction', 'Historical Fiction', 'Thriller', 'Mystery', 'Romance', 'Fantasy', 'Nonfiction')
+
+data_main <- data_awards
+
+for (row in 1:nrow(data_main)) {
+  
+  one_of_the_genres <- FALSE
+  
+  for (genre in genre_buttons) {
+    
+    one_of_the_genres <- one_of_the_genres | data_main[row, genre]
+    
+    if (one_of_the_genres) break
+    
+  }
+  
+  data_main[row, 'Other'] = !one_of_the_genres
+}
+
+summary_main_genres <- data_main %>%
+  select(any_of(c(genre_buttons, 'Other'))) %>%
+  group_by() %>%
+  summarise_all(sum) %>%
+  ungroup() %>%
+  mutate_all(.funs=~./5000) %>%
+  gather(key = "genres", value = "pct")
+
+ggplot(summary_main_genres, aes(x = pct, y = genres)) + geom_col()
+
 # top 1000 -----------------------------------------------------------------
 
-top1000 <- data_clean %>% filter(rank <= 1000)
+top1000 <- data_main %>% filter(rank <= 1000)
 
 covers <- readRDS('img-filenames-table.rds')
 
 top1000 <- top1000 %>% left_join(covers) %>% filter(!is.na(filename))
+
+
+# cleanup -----------------------------------------------------------------
+top1000 %>% filter(!stringi::stri_enc_isascii(title)) %>% select(title)
+
+top1000[which(top1000$url=="https://www.goodreads.com/book/show/646462._"),'title'] = "The Qur'an"
+
+problematic_titles_urls <- c(
+  'https://www.goodreads.com/book/show/40941582', 
+  'https://www.goodreads.com/book/show/30528544',
+  'https://www.goodreads.com/book/show/30528535',
+  'https://www.goodreads.com/book/show/40937505')
+
+top1000 <- top1000 %>%
+  filter(!(url %in% problematic_titles_urls))
+
+oldies <- top1000 %>% arrange(year_publication) %>% 
+  filter(row_number() < 100) %>% 
+  select(title, authors_list, url)
 
 ggplot(top1000) + geom_boxplot(aes(y = 1, x = numPages))
 ggplot(top1000) + geom_boxplot(aes(y = 1, x = avgRating))
@@ -249,6 +352,11 @@ data_with_covers <- top1000 %>%
 
 data_with_covers$pos_i <- positions$pos_i
 data_with_covers$pos_j <- positions$pos_j
+
+
+# cleanup -----------------------------------------------------------------
+
+top1000 %>% filter(!stringi::stri_enc_isascii(title)) %>% select(title, titleComplete, url)
 
 
 write_rds(data_with_covers, 'data_with_covers.rds')
