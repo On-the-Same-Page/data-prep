@@ -92,8 +92,8 @@ data_clean <- data_genres %>%
 # test
 # sum(round(data_genres$avgRating - data_genres$avg_rating_no,0), na.rm = T)
 
-write.csv(data_clean, 'data.csv', fileEncoding = 'utf-8')
-write.csv(genres_count, 'genres.csv', fileEncoding = 'utf-8')
+#write.csv(data_clean, 'data.csv', fileEncoding = 'utf-8')
+#write.csv(genres_count, 'genres.csv', fileEncoding = 'utf-8')
 
 
 # Superdata ---------------------------------------------------------------
@@ -276,12 +276,11 @@ ggplot(summary_main_genres, aes(x = pct, y = genres)) + geom_col()
 
 # top 1000 -----------------------------------------------------------------
 
-top1000 <- data_main %>% filter(rank <= 1000)
+pre_top1000 <- data_main %>% filter(rank <= 1000)
 
-covers <- readRDS('img-filenames-table.rds')
+covers <- readRDS('img-filenames-table.rds') %>% filter(!is.na(imageUrl))
 
-top1000 <- top1000 %>% left_join(covers) %>% filter(!is.na(filename))
-
+top1000 <- pre_top1000 %>% inner_join(covers, by = 'imageUrl') %>% filter(!is.na(filename))
 
 # cleanup -----------------------------------------------------------------
 top1000 %>% filter(!stringi::stri_enc_isascii(title)) %>% select(title)
@@ -292,24 +291,25 @@ problematic_titles_urls <- c(
   'https://www.goodreads.com/book/show/40941582', 
   'https://www.goodreads.com/book/show/30528544',
   'https://www.goodreads.com/book/show/30528535',
-  'https://www.goodreads.com/book/show/40937505')
+  'https://www.goodreads.com/book/show/40937505',
+  'https://www.goodreads.com/book/show/1375.The_Iliad_The_Odyssey')
 
 top1000 <- top1000 %>%
   filter(!(url %in% problematic_titles_urls))
 
 oldies <- top1000 %>% arrange(year_publication) %>% 
   filter(row_number() < 100) %>% 
-  select(title, authors_list, url)
+  select(title, single_author, authors_list, url, year_publication)
 
-ggplot(top1000) + geom_boxplot(aes(y = 1, x = numPages))
-ggplot(top1000) + geom_boxplot(aes(y = 1, x = avgRating))
-ggplot(top1000) + geom_boxplot(aes(y = 1, x = year_publication))
-
-ggplot(top1000) + geom_point(aes(x = year_publication, y = ratingsCount))
-
-library(treemap)
-treemap(top1000, index="title", vSize="numPages", type = "index")
-treemap(top1000, index="title", vSize="ratingsCount", type = "index")
+# ggplot(top1000) + geom_boxplot(aes(y = 1, x = numPages))
+# ggplot(top1000) + geom_boxplot(aes(y = 1, x = avgRating))
+# ggplot(top1000) + geom_boxplot(aes(y = 1, x = year_publication))
+# 
+# ggplot(top1000) + geom_point(aes(x = year_publication, y = ratingsCount))
+# 
+# library(treemap)
+# treemap(top1000, index="title", vSize="numPages", type = "index")
+# treemap(top1000, index="title", vSize="ratingsCount", type = "index")
 
 
 # opening - grid ----------------------------------------------------------
