@@ -272,7 +272,7 @@ summary_main_genres <- data_main %>%
   mutate_all(.funs=~./5000) %>%
   gather(key = "genres", value = "pct")
 
-ggplot(summary_main_genres, aes(x = pct, y = genres)) + geom_col()
+ggplot(summary_main_genres, aes(x = pct, y = reorder(genres, pct))) + geom_col()
 
 # top 1000 -----------------------------------------------------------------
 
@@ -312,29 +312,43 @@ oldies <- top1000 %>% arrange(year_publication) %>%
 # treemap(top1000, index="title", vSize="ratingsCount", type = "index")
 
 
-# opening - grid ----------------------------------------------------------
+# opening - grid 1---------------------------------------------------------
 
 library(readxl)
-grid <- read_excel('OntheSamePAge-grid-butchered.xlsx') %>%
+grid1 <- read_excel('Athousandbooks-grid.xlsx') %>%
   as.data.frame()
 
-positions <- data.frame()
-n <- 0
 
-for (i in 1:nrow(grid)) {
+grid2 <- read_excel('OntheSamePAge-grid-butchered.xlsx') %>%
+  as.data.frame()
+
+get_grid_positions <- function(grid) {
   
-  for (j in 1:ncol(grid)) {
+  positions <- data.frame()
+  n <- 0
+  
+  for (i in 1:nrow(grid)) {
     
-    if (!is.na(grid[i,j])) {
+    for (j in 1:ncol(grid)) {
       
-      positions[n+1, 'n'] <- n
-      positions[n+1, 'pos_i'] <- j - 1
-      positions[n+1, 'pos_j'] <- i - 1
-      n <- n + 1
-      
+      if (!is.na(grid[i,j])) {
+        
+        positions[n+1, 'n'] <- n
+        positions[n+1, 'pos_i'] <- j - 1
+        positions[n+1, 'pos_j'] <- i - 1
+        n <- n + 1
+        
+      }
     }
   }
+  
+  return(positions)
+  
+  
 }
+
+pos1 <- get_grid_positions(grid1)
+pos2 <- get_grid_positions(grid2)
 
 max_j <- max(positions$pos_j)
 
@@ -344,20 +358,21 @@ book_covers_files <- dir('./imgs/')
 
 data_with_covers <- top1000 %>%
   filter(filename %in% book_covers_files) %>%
-  arrange(rank) %>%
-  filter(row_number() <= nrow(positions)) # (1)
+  arrange(rank) #%>%
+  #filter(row_number() <= nrow(positions)) # (1)
 # --
 # (1) Getting only the first n books, where n is the number of "pixels" that were necessary to create the "On the Same Page" art
 
+pos1 <- bind_rows(pos1, pos1) %>% filter(row_number() <= nrow(data_with_covers))
+pos2 <- bind_rows(pos2, pos2) %>% filter(row_number() <= nrow(data_with_covers))
 
-data_with_covers$pos_i <- positions$pos_i
-data_with_covers$pos_j <- positions$pos_j
+data_with_covers$pos1_i <- pos1$pos_i
+data_with_covers$pos1_j <- pos1$pos_j
+data_with_covers$pos2_i <- pos2$pos_i
+data_with_covers$pos2_j <- pos2$pos_j
 
 
-# cleanup -----------------------------------------------------------------
-
-top1000 %>% filter(!stringi::stri_enc_isascii(title)) %>% select(title, titleComplete, url)
-
+# write data out ----------------------------------------------------------
 
 write_rds(data_with_covers, 'data_with_covers.rds')
 jsonlite::write_json(data_with_covers, path = 'data.json')
