@@ -319,7 +319,7 @@ grid1 <- read_excel('Athousandbooks-grid.xlsx') %>%
   as.data.frame()
 
 
-grid2 <- read_excel('OntheSamePAge-grid-butchered.xlsx') %>%
+grid2 <- read_excel('OntheSamePAge-grid-rebutchered.xlsx') %>%
   as.data.frame()
 
 get_grid_positions <- function(grid) {
@@ -350,7 +350,7 @@ get_grid_positions <- function(grid) {
 pos1 <- get_grid_positions(grid1)
 pos2 <- get_grid_positions(grid2)
 
-max_j <- max(positions$pos_j)
+#max_j <- max(positions$pos_j)
 
 #ggplot(positions, aes(x = pos_i, y = max_j-pos_j)) + geom_point()
 
@@ -376,3 +376,16 @@ data_with_covers$pos2_j <- pos2$pos_j
 
 write_rds(data_with_covers, 'data_with_covers.rds')
 jsonlite::write_json(data_with_covers, path = 'data.json')
+
+
+# plots, more -------------------------------------------------------------
+
+library(GGally)
+
+data_par_coord <- data_with_covers %>% select(title, ratingsCount, numPages, avgRating, year_publication, )
+write.csv(data_par_coord, 'parcoord.csv')
+
+par(bg = "white")
+plot(data_par_coord %>% select(-title) , pch=20 , cex=.4 , col="tomato")
+
+p<-ggparcoord(data = data_par_coord, order = 'Convex' , columns = 1:4)

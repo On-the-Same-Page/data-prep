@@ -1,0 +1,993 @@
+"","title","ratingsCount","numPages","avgRating","year_publication"
+"1","The Hunger Games",7829178,374,4.33,2008
+"2","Harry Potter and the Order of the Phoenix",3097779,912,4.5,2003
+"3","Pride and Prejudice",3869869,279,4.28,1813
+"4","To Kill a Mockingbird",5602265,336,4.27,1960
+"5","The Book Thief",2322766,552,4.39,2006
+"6","Twilight",6075582,498,3.64,2005
+"7","Animal Farm",3504423,141,3.98,1945
+"8","The Chronicles of Narnia",609485,767,4.27,1956
+"9","J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings",126209,1728,4.61,1955
+"10","The Fault in Our Stars",4679988,313,4.15,2012
+"11","Gone with the Wind",1172025,1037,4.3,1936
+"12","The Giving Tree",1056519,64,4.38,1964
+"13","Wuthering Heights",1656846,464,3.88,1847
+"14","The Picture of Dorian Gray",1330585,272,4.12,1890
+"15","Harry Potter and the Philosopher’s Stone",9122327,223,4.47,1997
+"16","Jane Eyre",1947162,532,4.14,1847
+"17","The Perks of Being a Wallflower",1627128,213,4.22,1999
+"18","The Da Vinci Code",2225602,489,3.9,2003
+"19","The Great Gatsby",4754476,180,3.93,1925
+"20","Alice's Adventures in Wonderland / Through the Looking-Glass",529946,239,4.07,1871
+"21","Memoirs of a Geisha",1913820,503,4.14,1997
+"22","The Little Prince",1880095,96,4.32,1943
+"23","Divergent",3650676,487,4.15,2011
+"24","Les Misérables",760637,1463,4.19,1862
+"25","The Lightning Thief",2641354,377,4.29,2005
+"26","Crime and Punishment",801667,671,4.25,1866
+"27","Lord of the Flies",2699948,182,3.69,1954
+"28","Romeo and Juliet",2436682,281,3.74,1597
+"29","Anne of Green Gables",903340,320,4.3,1908
+"30","City of Bones",1895052,485,4.08,2007
+"31","The Hitchhiker's Guide to the Galaxy",1717569,193,4.23,1979
+"32","The Help",2568029,464,4.47,2009
+"33","Ender’s Game",1294981,324,4.31,1985
+"34","Charlotte's Web",1703554,184,4.19,1952
+"35","Dracula",1155262,488,4.01,1897
+"36","Of Mice and Men",2358477,103,3.88,1937
+"37","The Alchemist",2734720,175,3.9,1988
+"38","The Catcher in the Rye",3270943,277,3.81,1951
+"39","Brave New World",1716791,268,3.99,1932
+"40","One Hundred Years of Solitude",897746,417,4.11,1967
+"41","The Time Traveler's Wife",1724747,537,3.99,2003
+"42","Fahrenheit 451",2171115,194,3.97,1953
+"43","A Thousand Splendid Suns",1404303,372,4.42,2007
+"44","The Princess Bride",863049,456,4.26,1973
+"45","The Secret Garden",1081473,331,4.15,1911
+"46","A Game of Thrones",2327849,835,4.44,1996
+"47","The Outsiders",1198294,192,4.12,1967
+"48","A Wrinkle in Time",1143474,218,3.99,1962
+"49","The Odyssey",1004197,541,3.8,-700
+"50","The Adventures of Huckleberry Finn",1230228,327,3.83,1884
+"51","The Lovely Bones",2249794,372,3.84,2002
+"52","Little Women",2052129,449,4.13,1868
+"53","Where the Wild Things Are",953523,38,4.24,1963
+"54","1984",4113671,298,4.19,1949
+"55","The Kite Runner",2912196,371,4.33,2003
+"56","Green Eggs and Ham",727518,64,4.3,1960
+"57","Frankenstein: The 1818 Text",1441235,260,3.85,1818
+"58","Life of Pi",1535795,460,3.93,2001
+"59","A Tale of Two Cities",903340,489,3.86,1859
+"60","The Handmaid’s Tale",1857762,314,4.13,1985
+"61","The Giver",2246079,208,4.13,1993
+"62","Harry Potter and the Deathly Hallows",3417540,759,4.62,2007
+"63","Lolita",781711,331,3.88,1955
+"64","Water for Elephants",1543978,368,4.1,2006
+"65","Slaughterhouse-Five",1287179,275,4.09,1969
+"66","Dune",1174083,658,4.26,1965
+"67","The Stand",714041,1152,4.34,1978
+"68","Catch-22",797805,453,3.99,1961
+"69","Harry Potter and the Prisoner of Azkaban",3728123,435,4.58,1999
+"70","The Bell Jar",803601,294,4.04,1963
+"71","Matilda",856006,240,4.33,1988
+"72","The Pillars of the Earth",724328,976,4.33,1989
+"73","The Adventures of Sherlock Holmes",281534,389,4.3,1892
+"74","Watership Down",464745,478,4.08,1972
+"75","Great Expectations",753622,544,3.79,1860
+"76","Rebecca",573087,449,4.24,1938
+"77","The Girl with the Dragon Tattoo",3003968,480,4.16,2005
+"78","Outlander",977883,850,4.25,1991
+"79","The Fellowship of the Ring",2659777,432,4.38,1954
+"80","One Flew Over the Cuckoo's Nest",698718,325,4.2,1962
+"81","The Color Purple",623977,304,4.25,1982
+"82","My Sister's Keeper",1166498,423,4.09,2004
+"83","Anna Karenina",788434,964,4.08,1878
+"84","The Brothers Karamazov",294797,796,4.35,1879
+"85","A Tree Grows in Brooklyn",437614,496,4.29,1943
+"86","A Clockwork Orange",674720,240,4,1962
+"87","The Road",828523,241,3.98,2006
+"88","Angela's Ashes",603576,452,4.14,1996
+"89","Vampire Academy",622756,332,4.11,2007
+"90","Siddhartha",708782,152,4.06,1922
+"91","The Golden Compass",1452595,399,4.01,1995
+"92","It",1008939,1116,4.25,1986
+"93","And Then There Were None",1179037,264,4.28,1939
+"94","The Poisonwood Bible",711506,546,4.08,1998
+"95","To Kill a Mockingbird",5602265,323,4.27,1960
+"96","The Shining",1365759,659,4.26,1977
+"97","The Complete Stories and Poems",243357,821,4.38,1849
+"98","Interview with the Vampire",551203,346,4.01,1976
+"99","Don Quixote",249715,1023,3.89,1605
+"100","The Old Man and the Sea",1040521,96,3.8,1952
+"101","Atlas Shrugged",378240,1168,3.69,1957
+"102","The Notebook",1577326,227,4.14,1996
+"103","Winnie-the-Pooh",310684,161,4.35,1926
+"104","Harry Potter and the Goblet of Fire",3335601,734,4.56,2000
+"105","Fahrenheit 451",2171115,158,3.97,1953
+"106","A Prayer for Owen Meany",308867,637,4.24,1989
+"107","Moby-Dick or, the Whale",529836,654,3.53,1851
+"108","Harry Potter and the Half-Blood Prince",3001187,652,4.58,2005
+"109","Clockwork Angel",787403,479,4.32,2010
+"110","The Secret Life of Bees",1237681,302,4.08,2001
+"111","The Red Tent",573573,324,4.19,1997
+"112","The Stranger",932163,159,4.01,1942
+"113","The Name of the Wind",876914,662,4.52,2007
+"114","The Master and Margarita",310926,372,4.3,1967
+"115","Harry Potter and the Chamber of Secrets",3527030,341,4.43,1998
+"116","Flowers for Algernon",600444,216,4.18,1959
+"117","Middlesex",621583,529,4.02,2002
+"118","The Metamorphosis",890964,201,3.84,1915
+"119","Eragon",1657140,503,3.93,2002
+"120","The Adventures of Tom Sawyer",881650,244,3.92,1876
+"121","The Alchemist",2734753,197,3.9,1988
+"122","Charlie and the Chocolate Factory",794116,176,4.15,1964
+"123","Looking for Alaska",1459937,221,3.98,2005
+"124","The Hobbit",3597134,366,4.28,1937
+"125","The Very Hungry Caterpillar",474684,26,4.32,1969
+"126","The Curious Incident of the Dog in the Night-Time",1396486,226,3.89,2003
+"127","The Shadow of the Wind",579228,487,4.29,2001
+"128","Tuesdays with Morrie",939374,210,4.15,1997
+"129","On the Road",388120,307,3.62,1957
+"130","The Last Olympian",877057,381,4.53,2009
+"131","The Unbearable Lightness of Being",419749,320,4.11,1984
+"132","The Count of Monte Cristo",857472,1276,4.28,1844
+"133","The Name of the Rose",344057,536,4.13,1980
+"134","The Lion, the Witch and the Wardrobe",2584584,206,4.23,1950
+"135","The Godfather",391990,448,4.38,1969
+"136","Where the Red Fern Grows",384686,272,4.1,1961
+"137","In Cold Blood",614280,343,4.08,1965
+"138","The Scarlet Letter",816122,279,3.43,1850
+"139","Holes",1126078,233,3.99,1998
+"140","Fight Club",555740,224,4.19,1996
+"141","Perfume: The Story of a Murderer",416762,263,4.03,1985
+"142","The Five People You Meet in Heaven",671564,196,3.97,2003
+"143","American Gods",872309,635,4.11,2001
+"144","The Cat in the Hat",509581,61,4.18,1957
+"145","Hush, Hush",671316,391,3.93,2009
+"146","Watchmen",534175,416,4.37,1987
+"147","The Divine Comedy",140519,798,4.07,1320
+"148","Lonesome Dove",173798,960,4.51,1985
+"149","The Little House Collection",149639,2700,4.35,1971
+"150","All Quiet on the Western Front",415699,296,4.04,1928
+"151","Peter Pan",326470,176,4.04,1911
+"152","The Addiction Manifesto",1056,178,4.88,2018
+"153","Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch",669039,491,4.25,1990
+"154","Love in the Time of Cholera",474536,348,3.93,1985
+"155","Insurgent",1398497,525,3.99,2012
+"156","A Walk to Remember",774471,215,4.19,1999
+"157","The Thorn Birds",338829,692,4.24,1977
+"158","The Compleat Works of Wllm Shkspr",8667,137,4.46,2000
+"159","Shadow Kiss",353222,443,4.34,2008
+"160","The Battle of the Labyrinth",954652,361,4.41,2008
+"161","How the Grinch Stole Christmas!",389532,64,4.37,1957
+"162","The Ultimate Hitchhiker's Guide to the Galaxy",311475,815,4.38,1996
+"163","The Importance of Being Earnest",346743,76,4.18,1895
+"164","Their Eyes Were Watching God",317356,238,3.97,1937
+"165","Clockwork Princess",416180,567,4.56,2013
+"166","The Titan's Curse",913880,320,4.36,2007
+"167","Eat, Pray, Love",1664380,368,3.61,2006
+"168","The Wonderful Wizard of Oz",427651,154,3.99,1900
+"169","Atonement",493023,351,3.93,2001
+"170","The Three Musketeers",307667,625,4.09,1844
+"171","The Sea of Monsters",1008279,279,4.24,2006
+"172","The Lorax",326562,72,4.34,1971
+"173","Goodnight Moon",355226,32,4.3,1947
+"174","Frostbite",341143,327,4.26,2008
+"175","A Midsummer Night's Dream",508617,240,3.95,1595
+"176","The Maze Runner",1376038,384,4.04,2009
+"177","Tess of the D’Urbervilles",269103,518,3.82,1891
+"178","Heart of Darkness",479786,188,3.43,1899
+"179","Blood Promise",301736,503,4.31,2009
+"180","The Hunger Games Trilogy Boxset",210107,1155,4.49,2008
+"181","The Prophet",278431,127,4.23,1923
+"182","Six of Crows",758893,465,4.49,2015
+"183","The Good Earth",240985,418,4,1931
+"184","Bridge to Terabithia",515047,190,4.03,1977
+"185","The Haunting of Hill House",250474,182,3.83,1959
+"186","The Call of the Wild",400038,172,3.89,1903
+"187","Alice in Wonderland",385133,92,4.03,1865
+"188","The Joy Luck Club",649530,352,3.95,1989
+"189","Catching Fire",3167874,391,4.31,2009
+"190","The Mists of Avalon",201547,1009,4.13,1982
+"191","The Phantom Tollbooth",273341,248,4.19,1961
+"192","Murder on the Orient Express",541659,274,4.2,1934
+"193","Throne of Glass",966789,406,4.19,2012
+"194","Oh, the Places You'll Go!",383891,44,4.36,1990
+"195","Madame Bovary",307311,329,3.7,1856
+"196","Jonathan Livingston Seagull",237038,112,3.85,1970
+"197","Oliver Twist",365928,608,3.88,1838
+"198","Treasure Island",459192,311,3.84,1882
+"199","The Silence of the Lambs",523733,421,4.23,1988
+"200","The Neverending Story",189126,396,4.18,1979
+"201","The Girl Who Played with Fire",885963,503,4.25,2006
+"202","Ulysses",121519,783,3.75,1922
+"203","The Night Circus",876998,387,4.03,2011
+"204","The Selection",1371236,336,4.09,2012
+"205","Fifty Shades of Grey",2399065,356,3.66,2011
+"206","A Storm of Swords",736038,1177,4.54,2000
+"207","The Clan of the Cave Bear",255330,516,4.08,1980
+"208","The Boy in the Striped Pajamas",725738,240,4.15,2006
+"209","A Farewell to Arms",300871,293,3.81,1929
+"210","The Canterbury Tales",211737,521,3.52,1400
+"211","The World According to Garp",220684,610,4.1,1978
+"212","Jurassic Park",904395,466,4.08,1990
+"213","The Secret History",540401,559,4.17,1992
+"214","David Copperfield",222833,882,4.02,1850
+"215","Beloved",396850,324,3.93,1987
+"216","Thirteen Reasons Why",918115,352,3.86,2007
+"217","Misery",624608,370,4.2,1987
+"218","A Little Princess",294903,242,4.21,1905
+"219","The Lost Hero",766864,553,4.32,2010
+"220","Wicked: The Life and Times of the Wicked Witch of the West",587582,406,3.54,1995
+"221","His Dark Materials",156092,1088,4.28,2000
+"222","The Diary of a Young Girl",3436306,283,4.18,1947
+"223","A Story of Yesterday",10435,70,4.59,2014
+"224","A Court of Mist and Fury",960252,626,4.63,2016
+"225","Shōgun",166583,1152,4.4,1975
+"226","Schindler's List",156133,429,4.34,1982
+"227","Extremely Loud & Incredibly Close",408713,326,3.97,2005
+"228","The Green Mile",293557,592,4.47,1996
+"229","The Velveteen Rabbit",249186,40,4.29,1922
+"230","The Other Boleyn Girl",485422,661,4.08,2001
+"231","The Silmarillion",263741,386,3.98,1977
+"232","The Trial",286935,255,3.96,1925
+"233","Clockwork Prince",522421,498,4.43,2011
+"234","The Song of Achilles",1087808,378,4.37,2011
+"235","Last Sacrifice",277717,594,4.38,2010
+"236","Fallen",560592,452,3.72,2009
+"237","A Confederacy of Dunces",261044,394,3.88,1980
+"238","Cinder",852957,400,4.13,2012
+"239","The Secret Magdalene",4424,448,4.16,2005
+"240","The Sun Also Rises",414242,189,3.8,1926
+"241","The Crucible",381520,143,3.6,1953
+"242","Man's Search for Meaning",606224,165,4.37,1946
+"243","Cat's Cradle",379679,179,4.16,1963
+"244","The Screwtape Letters",405154,228,4.25,1942
+"245","City of Fallen Angels",567935,425,4.09,2011
+"246","Spirit Bound",284158,489,4.33,2010
+"247","The God of Small Things",279800,321,3.95,1997
+"248","The Wind in the Willows",203110,197,4,1908
+"249","A Light in the Attic",424762,176,4.35,1981
+"250","The Hiding Place: The Triumphant True Story of Corrie Ten Boom",301431,242,4.45,1971
+"251","Gone Girl",2830141,415,4.12,2012
+"252","The Phantom of the Opera",225222,360,3.96,1909
+"253","Girl with a Pearl Earring",706112,233,3.92,1999
+"254","Blindness",259507,349,4.16,1995
+"255","Howl’s Moving Castle",295988,329,4.29,1986
+"256","Uglies",631544,425,3.85,2005
+"257","Ella Enchanted",404382,232,4,1997
+"258","The Wind-Up Bird Chronicle",260703,607,4.15,1994
+"259","A Clash of Kings",880210,969,4.41,1998
+"260","She's Come Undone",336576,465,3.9,1992
+"261","Marley and Me: Life and Love With the World's Worst Dog",462767,291,4.14,2005
+"262","Shiver",467746,392,3.76,2009
+"263","The House of the Spirits",238807,448,4.27,1982
+"264","The Guernsey Literary and Potato Peel Pie Society",710744,291,4.18,2008
+"265","The Shack",613050,294,3.81,2007
+"266","The Sound and the Fury",173502,366,3.86,1929
+"267","For Whom the Bell Tolls",277718,471,3.98,1940
+"268","Fear and Loathing in Las Vegas",331323,204,4.07,1971
+"269","Marked",473765,306,3.81,2007
+"270","The Complete Calvin and Hobbes",38748,1456,4.8,2005
+"271","Stranger in a Strange Land",301105,525,3.92,1961
+"272","Roots: The Saga of an American Family",156363,888,4.44,1976
+"273","Speak",558408,224,4.04,1999
+"274","Norwegian Wood",516412,296,4.03,1987
+"275","Island of the Blue Dolphins",320124,194,3.86,1960
+"276","Paper Towns",1238439,305,3.73,2008
+"277","Othello",364518,314,3.89,1603
+"278","The Girl Who Kicked the Hornet's Nest",706420,566,4.23,2007
+"279","Blood River: A Journey to Africa's Broken Heart",11077,363,3.97,2007
+"280","The Idiot",163470,667,4.2,1869
+"281","Inkheart",406671,563,3.91,2003
+"282","Into the Wild",1027475,203,4,1996
+"283","Beautiful Disaster",640159,319,4.04,2011
+"284","Kafka on the Shore",413999,467,4.14,2002
+"285","King Lear",205730,338,3.91,1605
+"286","Delirium",454379,441,3.96,2011
+"287","White Oleander",343326,446,3.98,1999
+"288","Neverwhere",495006,370,4.17,1996
+"289","The Complete Sherlock Holmes",192440,1796,4.5,1894
+"290","Mockingjay",2890192,398,4.07,2010
+"291","Uncle Tom's Cabin",217235,438,3.9,1852
+"292","The Vampire Lestat",191364,481,4.09,1985
+"293","Invisible Man",177459,581,3.9,1952
+"294","Different Seasons",194987,560,4.35,1982
+"295","The Lord of the Rings",637967,1216,4.52,1955
+"296","I Know This Much Is True",304916,897,4.2,1998
+"297","The Once and Future King",105335,639,4.07,1958
+"298","Flow Down Like Silver: Hypatia of Alexandria",4584,301,3.98,2009
+"299","All Creatures Great and Small",138113,437,4.33,1972
+"300","The Historian",257775,704,3.79,2005
+"301","The Things They Carried",290672,246,4.14,1990
+"302","Candide",259506,129,3.76,1759
+"303","Paradise Lost",155689,453,3.83,1667
+"304","Lamb: The Gospel According to Biff, Christ's Childhood Pal",167726,444,4.23,2002
+"305","Foundation",498432,244,4.17,1951
+"306","The Complete Works",54825,1248,4.47,1623
+"307","The Thirteenth Tale",302513,406,3.97,2006
+"308","James and the Giant Peach",445483,146,4.02,1961
+"309","Never Let Me Go",612776,288,3.84,2005
+"310","Heidi",190618,352,4.01,1880
+"311","The Time Machine",485382,118,3.9,1895
+"312","Leaves of Grass",97232,624,4.11,1855
+"313","The Seven Husbands of Evelyn Hugo",1904291,389,4.46,2017
+"314","The Way of Kings",413825,1007,4.65,2010
+"315","Graceling",438716,471,4.07,2008
+"316","City of Lost Souls",501136,535,4.23,2012
+"317","Ready Player One",1070437,374,4.24,2011
+"318","The Wise Man's Fear",511415,994,4.55,2011
+"319","The Cider House Rules",177096,973,4.15,1985
+"320","The Son of Neptune",524741,521,4.42,2011
+"321","Are You There God? It's Me, Margaret",204639,149,3.92,1970
+"322","Wonder",998926,315,4.38,2012
+"323","The Mark of Athena",541658,586,4.47,2012
+"324","Walden",179288,352,3.78,1854
+"325","Fangirl",709557,483,3.97,2013
+"326","Sophie's World",242721,403,3.96,1991
+"327","Me Before You",1485520,369,4.26,2012
+"328","Crooked Kingdom",510903,561,4.61,2016
+"329","The Awakening",194334,195,3.67,1899
+"330","Mrs. Dalloway",274102,194,3.79,1925
+"331","The Final Empire",564335,541,4.47,2006
+"332","Fried Green Tomatoes at the Whistle Stop Cafe",293229,416,4.28,1987
+"333","'Salem's Lot",410322,483,4.05,1975
+"334","Legend",496594,305,4.16,2011
+"335","Sophie's Choice",87996,562,4.18,1979
+"336","East of Eden",496623,601,4.4,1952
+"337","The Prince of Tides",203620,679,4.25,1986
+"338","Middlemarch",152874,904,4,1872
+"339","The Hound of the Baskervilles",318221,256,4.13,1901
+"340","Fifty Shades Darker",852824,532,3.83,2011
+"341","Dead Until Dark",525006,292,3.96,2001
+"342","Things Fall Apart",342738,209,3.72,1958
+"343","Stardust",420321,248,4.1,1998
+"344","Do Androids Dream of Electric Sheep?",413419,258,4.09,1968
+"345","The Monster at the End of this Book",123395,32,4.45,1971
+"346","The Martian",1019051,384,4.41,2011
+"347","Eleanor & Park",1096161,328,3.96,2012
+"348","The Magician's Nephew",498258,221,4.05,1955
+"349","Hamlet",877844,289,4.03,1601
+"350","A Time to Kill",778579,738,4.1,1989
+"351","Bridget Jones's Diary",947116,271,3.8,1996
+"352","Franny and Zooey",208830,201,3.97,1957
+"353","Shatter Me",602273,338,3.9,2011
+"354","Black Beauty",265571,245,3.98,1877
+"355","V for Vendetta",297594,296,4.26,1990
+"356","The Complete Maus",194176,296,4.56,1980
+"357","Number the Stars",529799,137,4.18,1989
+"358","The Power of One",85542,544,4.34,1989
+"359","A Short History of Nearly Everything",361643,544,4.21,2003
+"360","The Art of Racing in the Rain",495743,336,4.22,2008
+"361","If I Stay",847638,201,3.93,2009
+"362","The Graveyard Book",505725,312,4.15,2008
+"363","A Court of Thorns and Roses",1338716,432,4.2,2015
+"364","The Witches",373541,208,4.17,1983
+"365","The Gunslinger",574535,231,3.93,1982
+"366","Allegiant",982278,531,3.61,2013
+"367","Love You Forever",227880,32,4.37,1986
+"368","White Fang",177979,252,4.01,1906
+"369","The Complete Novels",32101,1344,4.57,1813
+"370","All the Light We Cannot See",1409959,531,4.32,2014
+"371","Gulliver's Travels: Travels into Several Remote Nations of the World.",260938,306,3.58,1726
+"372","American Psycho",282177,399,3.82,1991
+"373","Beowulf",284723,245,3.47,900
+"374","A Portrait of the Artist as a Young Man",143389,329,3.63,1916
+"375","Bel Canto",267557,318,3.93,2001
+"376","Fifty Shades Freed",808810,579,3.84,2012
+"377","The Qur'an",64826,604,4.38,632
+"378","Tuck Everlasting",260124,148,3.89,1975
+"379","The Eye of the World",491507,800,4.19,1990
+"380","Cold Mountain",236274,449,3.88,1997
+"381","Go Ask Alice",262811,213,3.75,1971
+"382","The Tell-Tale Heart and Other Writings",235832,448,4.19,1843
+"383","As I Lay Dying",156163,288,3.72,1930
+"384","Harry Potter Series Box Set",276481,4100,4.74,2007
+"385","Dark Lover",323933,393,4.16,2005
+"386","A Separate Peace",209630,208,3.59,1959
+"387","Beautiful Creatures",581810,563,3.77,2009
+"388","Eldest",410719,704,4.01,2005
+"389","A Child Called ""It""",415334,184,4.12,1995
+"390","The Martian Chronicles",245854,182,4.15,1950
+"391","Cloud Atlas",238423,509,4.01,2004
+"392","Steppenwolf",167992,256,4.13,1927
+"393","Mansfield Park",327561,488,3.86,1814
+"394","Tao Te Ching",144122,160,4.3,-350
+"395","Notre-Dame de Paris | The Hunchback of Notre-Dame",190706,510,4.01,1831
+"396","Aristotle and Dante Discover the Secrets of the Universe",513424,359,4.34,2012
+"397","Obsidian",270505,335,4.15,2011
+"398","Brisingr",345986,748,4.08,2008
+"399","The Amazing Adventures of Kavalier & Clay",196448,639,4.18,2000
+"400","Inferno",167274,490,4.02,1321
+"401","11/22/63",495173,849,4.32,2011
+"402","Robinson Crusoe",286797,320,3.68,1719
+"403","Stargirl",318375,186,3.77,2000
+"404","Midnight's Children",116851,647,3.98,1981
+"405","Zen and the Art of Motorcycle Maintenance: An Inquiry Into Values",220619,540,3.78,1974
+"406","Dr. Jekyll and Mr. Hyde",511693,139,3.83,1886
+"407","Dear John",582618,276,4.04,2006
+"408","The Firm",608829,76,4.05,1991
+"409","The English Patient",126234,320,3.87,1992
+"410","War and Peace",306300,1392,4.15,1869
+"411","The Last Song",540754,390,4.16,2008
+"412","The BFG",451383,199,4.22,1982
+"413","The Amber Spyglass",342331,465,4.1,2000
+"414","Room",777584,321,4.07,2010
+"415","Doctor Zhivago",92191,592,4.01,1957
+"416","The Grapes of Wrath",854777,479,4,1939
+"417","City of Heavenly Fire",357149,725,4.4,2014
+"418","It Ends with Us",2167844,386,4.3,2016
+"419","The House of Hades",359078,597,4.56,2013
+"420","Crescendo",310769,427,3.99,2010
+"421","The Plague",231615,308,4.02,1947
+"422","My Ántonia",131045,232,3.82,1918
+"423","Like Water for Chocolate",351486,222,3.95,1989
+"424","The Remains of the Day",267071,258,4.14,1989
+"425","Breakfast of Champions",247308,303,4.07,1973
+"426","Dragonfly in Amber",333045,947,4.33,1992
+"427","Flowers in the Attic",194848,389,3.84,1979
+"428","Breakfast at Tiffany's and Three Stories",246759,142,3.86,1958
+"429","Heir of Fire",516838,565,4.46,2014
+"430","The Origin of Species",109825,703,4,1859
+"431","Midnight in the Garden of Good and Evil",254372,386,3.92,1994
+"432","A Fine Balance",142558,603,4.37,1995
+"433","The Subtle Knife",416036,370,4.14,1997
+"434","A Streetcar Named Desire",293866,107,3.98,1947
+"435","The Prince",310372,140,3.83,1513
+"436","Hopeless",426413,410,4.28,2012
+"437","Daughter of Smoke & Bone",354706,418,4,2011
+"438","Death of a Salesman",217801,117,3.56,1949
+"439","Miss Peregrine's Home for Peculiar Children",1182507,352,3.92,2011
+"440","Infinite Jest",85932,1088,4.26,1996
+"441","Unbroken: A World War II Story of Survival, Resilience and Redemption",888667,475,4.37,2010
+"442","Evermore",283440,301,3.59,2009
+"443","Blood Meridian, or the Evening Redness in the West",134079,351,4.16,1985
+"444","A Feast for Crows",692434,1061,4.15,2005
+"445","Crown of Midnight",603364,420,4.36,2013
+"446","Snow Flower and the Secret Fan",362145,288,4.08,2005
+"447","Jonathan Strange & Mr Norrell",224789,1006,3.85,2004
+"448","The One",603431,323,4.17,2014
+"449","Pippi Longstocking",189430,160,4.15,1945
+"450","Anna and the French Kiss",435884,372,3.98,2010
+"451","The Virgin Suicides",282446,250,3.83,1993
+"452","Matched",742697,369,3.63,2010
+"453","The Scarlet Pimpernel",131235,182,4.07,1905
+"454","The Angel Experiment",219040,445,4.07,2005
+"455","Faust, First Part",70505,327,3.88,1808
+"456","High Fidelity",192011,340,3.92,1995
+"457","Artemis Fowl",534127,396,3.86,2001
+"458","The Shipping News",140742,337,3.87,1993
+"459","Carrie",649919,253,3.98,1974
+"460","Coraline",617706,176,4.1,2002
+"461","The Host",971854,624,3.85,2008
+"462","Red Queen",875123,388,4.02,2015
+"463","The Chosen",90428,304,4.06,1966
+"464","Houdini Heart",5686,254,3.82,2011
+"465","The Tales of Beedle the Bard",466577,105,4.05,2008
+"466","All the Bright Places",498358,378,4.14,2015
+"467","I Know Why the Caged Bird Sings",494308,289,4.28,1969
+"468","The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America",631041,447,4,2003
+"469","Shantaram",198998,936,4.27,2003
+"470","Waiting for Godot",187589,109,3.84,1952
+"471","Nineteen Minutes",343844,440,4.15,2007
+"472","Northanger Abbey",366613,260,3.84,1817
+"473","The Reader",196496,216,3.77,1995
+"474","Pet Sematary",531905,580,4.04,1983
+"475","Redeeming Love",286036,479,4.5,1991
+"476","To the Lighthouse",164208,209,3.8,1927
+"477","The Age of Innocence",161318,293,3.96,1920
+"478","Neuromancer",304052,292,3.9,1984
+"479","The Voyage of the Dawn Treader",443769,248,4.09,1952
+"480","Ignite Me",308345,421,4.46,2014
+"481","The Lost Symbol",582257,509,3.74,2009
+"482","Dubliners",143673,207,3.85,1914
+"483","The Waste Land",50449,320,4.1,1922
+"484","I, Robot",324397,224,4.21,1950
+"485","The Exorcist",215255,385,4.19,1971
+"486","The Cruel Prince",832965,370,4.08,2018
+"487","We Were Liars",987280,242,3.71,2014
+"488","Betrayed",258470,310,3.92,2007
+"489","Lover Awakened",174607,434,4.44,2006
+"490","A Dance with Dragons",617293,1125,4.33,2011
+"491","Persuasion",641104,249,4.15,1817
+"492","The Pearl",219318,96,3.51,1945
+"493","Divine Secrets of the Ya-Ya Sisterhood",547108,383,3.85,1996
+"494","A Little Life",426228,720,4.34,2015
+"495","The Twilight Collection",45631,1690,3.81,2007
+"496","The Jungle",139183,335,3.76,1905
+"497","Voyager",290686,870,4.39,1993
+"498","Untamed",228763,338,3.94,2008
+"499","Queen of Shadows",450808,648,4.56,2015
+"500","Everything is Illuminated",175232,276,3.89,2002
+"501","I, Claudius",62767,468,4.24,1934
+"502","The Republic",192422,416,3.96,-375
+"503","The Return of the King",815268,385,4.55,1955
+"504","Me Talk Pretty One Day",676754,272,4,2000
+"505","The Last Battle",257353,288,4.01,1956
+"506","A Room with a View",172618,119,3.9,1908
+"507","The 5th Wave",438529,457,4.02,2013
+"508","Snow Falling on Cedars",180705,460,3.85,1994
+"509","Bleak House",105055,1017,4.01,1853
+"510","Chosen",236669,307,3.91,2008
+"511","City of Glass",914519,541,4.29,2009
+"512","The Elephant Tree",26575,252,3.69,2010
+"513","Of Human Bondage",54303,684,4.13,1915
+"514","A Christmas Carol",769368,104,4.07,1843
+"515","The God Delusion",258083,374,3.9,2006
+"516","The Hate U Give",794019,454,4.49,2017
+"517","The Complete Poems of Emily Dickinson",91082,716,4.26,1890
+"518","The War of the Worlds",290636,192,3.83,1897
+"519","North and South",160831,521,4.15,1854
+"520","Angels & Demons",3046674,736,3.93,2000
+"521","World War Z: An Oral History of the Zombie War",496843,342,4.02,2006
+"522","The Goldfinch",852839,864,3.93,2013
+"523","The Elite",678333,336,3.96,2013
+"524","Brideshead Revisited",104813,351,4.01,1945
+"525","Bloodlines",181212,432,4.2,2011
+"526","A Discovery of Witches",455171,579,4.02,2011
+"527","The Iron King",207447,363,3.88,2010
+"528","The Raven Boys",339837,409,4.05,2012
+"529","Snow Crash",265323,559,4.03,1992
+"530","The Witching Hour",111260,1207,4.11,1990
+"531","Wizard's First Rule",241188,836,4.12,1994
+"532","The Woman in White",146192,672,4,1859
+"533","Unwind",215774,337,4.17,2007
+"534","Vanity Fair",124555,867,3.8,1847
+"535","Where the Crawdads Sing",2395168,384,4.42,2018
+"536","2001: A Space Odyssey",295800,297,4.16,1968
+"537","Cry, the Beloved Country",71943,316,3.91,1948
+"538","Johnny Got His Gun",40518,309,4.19,1939
+"539","Torment",227736,452,3.85,2010
+"540","Bared to You",505732,352,4.16,2012
+"541","A Great and Terrible Beauty",218914,403,3.79,2003
+"542","Cannery Row",128051,181,4.05,1945
+"543","The Two Towers",872700,447,4.47,1954
+"544","The Bad Beginning",483573,176,3.99,1999
+"545","Red, White & Royal Blue",680367,448,4.13,2019
+"546","Night",1153302,115,4.36,1956
+"547","Chocolat",121693,306,3.96,1999
+"548","The Mortal Instruments Boxed Set: City of Bones; City of Ashes; City of Glass",67488,1520,4.55,2009
+"549","Are You My Mother?",235318,64,4.2,1960
+"550","Halfway to the Grave",152533,358,4.14,2007
+"551","The Summoning",167789,390,4.02,2008
+"552","Perfect Chemistry",256274,368,4.05,2008
+"553","Three Cups of Tea: One Man's Mission to Promote Peace ... One School at a Time",340922,349,3.66,2006
+"554","The Polar Express",232677,32,4.31,1985
+"555","Sense and Sensibility",1115877,409,4.08,1811
+"556","Far From the Madding Crowd",144159,433,3.96,1874
+"557","Just Listen",243779,371,4.05,2006
+"558","Into Thin Air: A Personal Account of the Mount Everest Disaster",467788,368,4.22,1997
+"559","The Nightingale",1064618,440,4.6,2015
+"560","Sarah's Key",459184,294,4.17,2006
+"561","Ugly Love",1202920,337,4.15,2014
+"562","Much Ado About Nothing",234067,246,4.06,1598
+"563","Emma",808689,474,4.04,1815
+"564","The Truth About Forever",219326,374,4.12,2004
+"565","Ishmael",92474,338,4,1992
+"566","Circe",819198,393,4.25,2018
+"567","The Darkest Minds",179121,488,4.16,2012
+"568","The Horse and His Boy",324664,224,3.91,1954
+"569","Angelfall",185146,288,4.12,2011
+"570","Little House on the Prairie",281106,335,4.21,1935
+"571","Hyperion",226182,500,4.25,1989
+"572","Swann’s Way",55432,444,4.14,1913
+"573","The Last Lecture",331863,217,4.26,2008
+"574","A Court of Wings and Ruin",771769,705,4.45,2017
+"575","Nine Stories",142561,302,4.18,1953
+"576","Trainspotting",160640,431,4.09,1993
+"577","Lady Chatterley's Lover",115617,376,3.5,1928
+"578","Silence",272278,440,4.08,2011
+"579","Sabriel",200651,491,4.16,1995
+"580","The Red Pyramid",371941,528,4.1,2010
+"581","A Monster Calls",248736,237,4.35,2011
+"582","Acheron",58123,728,4.56,2008
+"583","I Am Number Four",333805,440,3.94,2010
+"584","Cutting for Stone",360154,541,4.3,2009
+"585","Dead to the World",253242,291,4.12,2004
+"586","The Unbecoming of Mara Dyer",170686,456,4.03,2011
+"587","I Capture the Castle",97592,408,4,1948
+"588","The Hours",135136,230,3.95,1998
+"589","Twelfth Night",172794,272,3.97,1601
+"590","You Are Special",51814,32,4.45,1997
+"591","Anne of Avonlea",180592,276,4.22,1909
+"592","Slammed",276213,354,4.21,2012
+"593","The Bronze Horseman",80374,637,4.3,2000
+"594","Little House in the Big Woods",256565,198,4.2,1932
+"595","The Goose Girl",140279,383,4.13,2003
+"596","No Country for Old Men",175381,309,4.14,2005
+"597","Shadow and Bone",821218,358,3.95,2012
+"598","The Zombie Room",27798,241,3.74,2012
+"599","Julius Caesar",192066,175,3.7,1599
+"600","The Westing Game",197595,182,4.01,1978
+"601","Drums of Autumn",235772,928,4.35,1996
+"602","The Glass Menagerie",127039,104,3.73,1945
+"603","Demian: Die Geschichte von Emil Sinclairs Jugend",98420,193,4.14,1919
+"604","I'll Give You the Sun",315965,371,4.16,2014
+"605","Speaker for the Dead",243430,382,4.09,1986
+"606","P.S. I Love You",369584,501,4.03,2004
+"607","The Last Unicorn",103213,294,4.16,1968
+"608","Cyrano de Bergerac",80707,240,4.06,1897
+"609","Macbeth",824678,249,3.9,1623
+"610","The Arabian Nights",68121,1049,4.05,800
+"611","World Without End",232833,1237,4.29,2007
+"612","Words of Radiance",289891,1087,4.75,2014
+"613","Cress",339501,552,4.42,2014
+"614","The Art of War",433822,273,3.97,-400
+"615","Interpreter of Maladies",182481,198,4.17,1999
+"616","Hunted",176286,323,3.92,2009
+"617","The Talisman",121638,656,4.12,1984
+"618","The Bean Trees",146477,232,3.99,1988
+"619","We Need to Talk About Kevin",184256,400,4.08,2003
+"620","The Invisible Life of Addie LaRue",782623,444,4.22,2020
+"621","A Dog's Purpose",126322,319,4.35,2010
+"622","Empire of Storms",377174,689,4.57,2016
+"623","All the King's Men",61483,439,4.08,1946
+"624","Scarlet",386468,454,4.25,2013
+"625","Wicked Lovely",161187,328,3.69,2007
+"626","The Knife of Never Letting Go",185596,512,3.97,2008
+"627","Before I Fall",327826,470,3.89,2010
+"628","Lover Eternal",186848,441,4.33,2006
+"629","The Silver Chair",277247,243,3.96,1953
+"630","Invisible Monsters",136273,304,3.99,1999
+"631","One Day in the Life of Ivan Denisovich",106164,182,3.97,1962
+"632","The Merchant of Venice",178437,247,3.79,1596
+"633","Gravity's Rainbow",41414,776,4,1973
+"634","Peace Like a River",86822,312,4,2001
+"635","The Secret",439047,199,3.72,2006
+"636","I Am Legend and Other Stories",127242,317,4,1954
+"637","A Brief History of Time",397432,213,4.21,1988
+"638","The Yellow Wallpaper and Other Stories",82772,70,4.05,1892
+"639","Inheritance",251208,849,4.12,2011
+"640","The Eyre Affair",128971,374,3.88,2001
+"641","A Wizard of Earthsea",288387,183,4.01,1968
+"642","The Scorch Trials",538369,362,3.9,2010
+"643","Poison Study",159606,427,4.1,2005
+"644","1Q84",241744,925,3.94,2009
+"645","The Queen of the Damned",146168,448,3.9,1988
+"646","Mythology",52323,497,4.03,1942
+"647","Foucault's Pendulum",66700,623,3.91,1988
+"648","Inferno",526420,463,3.88,2013
+"649","The Memory Keeper's Daughter",589533,401,3.69,2005
+"650","Where She Went",285191,264,3.99,2011
+"651","Prince Caspian",407129,240,3.98,1951
+"652","The Girl on the Train",2682676,336,3.95,2015
+"653","Left Behind",223162,470,3.85,1995
+"654","Seabiscuit: An American Legend",158601,457,4.22,1999
+"655","Sapiens: A Brief History of Humankind",871674,512,4.38,2011
+"656","Oedipus Rex",201268,75,3.72,-429
+"657","Call Me By Your Name",418406,248,4.12,2007
+"658","The Left Hand of Darkness",157620,304,4.09,1969
+"659","Carry On",288408,522,4.19,2015
+"660","Native Son",95187,504,4.02,1940
+"661","The Bourne Identity",423984,566,4.04,1980
+"662","The History of Love",131729,255,3.92,2005
+"663","The Night Before Christmas",118613,32,4.38,1823
+"664","Oryx and Crake",252163,389,4.01,2003
+"665","The Killer Angels",82149,345,4.32,1974
+"666","Something Wicked This Way Comes",120862,293,3.92,1962
+"667","If on a Winter's Night a Traveler",89010,260,4.04,1979
+"668","A People's History of the United States",229783,729,4.07,1980
+"669","Darkfever",174385,309,4.06,2006
+"670","Shadowfever",105774,608,4.39,2011
+"671","Rosencrantz and Guildenstern Are Dead",86696,126,4.04,1966
+"672","Into the Wild",94076,288,4.31,2003
+"673","The Bluest Eye",221505,216,4.1,1970
+"674","The Lies of Locke Lamora",269767,752,4.3,2006
+"675","The Magus",55395,656,4.05,1965
+"676","Twenty Thousand Leagues Under the Sea",237063,394,3.89,1870
+"677","The Ocean at the End of the Lane",569842,181,4.01,2013
+"678","We Have Always Lived in the Castle",182658,146,3.96,1962
+"679","The Wasp Factory",89719,184,3.79,1984
+"680","Gone",195208,560,3.86,2008
+"681","John Adams",350267,751,4.06,2001
+"682","To All the Boys I've Loved Before",781728,355,4.06,2014
+"683","Dandelion Wine",64801,239,4.08,1957
+"684","House of Sand and Fog",130127,368,3.86,1999
+"685","Champion",203557,369,4.33,2013
+"686","The Blind Assassin",149491,637,3.96,2000
+"687","Lover Unbound",130276,528,4.32,2007
+"688","Pretties",251679,370,3.84,2005
+"689","City of Ashes",880854,453,4.13,2008
+"690","Night Watch",105831,480,4.49,2002
+"691","Unravel Me",361575,461,4.18,2013
+"692","Alanna: The First Adventure",125740,274,4.26,1983
+"693","The Fiery Cross",198173,1443,4.25,2001
+"694","Watchers",159463,624,4.18,1987
+"695","Mistress Suffragette",4834,333,4.29,2017
+"696","Papillon",65990,544,4.22,1969
+"697","Possession",77625,555,3.89,1990
+"698","Assassin's Apprentice",291129,435,4.17,1995
+"699","One for the Money",527040,320,4.04,1994
+"700","The Long Walk",161947,370,4.1,1979
+"701","Veronika Decides to Die",206618,210,3.72,1998
+"702","A Breath of Snow and Ashes",166503,980,4.43,2005
+"703","Battle Royale",68654,624,4.25,1999
+"704","The Glass Castle",1099484,288,4.3,2005
+"705","From the Mixed-Up Files of Mrs. Basil E. Frankweiler",204050,178,4.15,1967
+"706","Geek Love",63565,348,3.96,1989
+"707","Simon vs. the Homo Sapiens Agenda",401680,303,4.19,2015
+"708","House of Leaves",152769,710,4.09,2000
+"709","The Dark Tower",162824,1050,4.27,2004
+"710","On Writing: A Memoir of the Craft",266533,320,4.33,2000
+"711","The Holy Bible: King James Version",264741,1590,4.43,1611
+"712","The Trigger: Hunting the Assassin Who Brought the World to War",3883,352,3.78,2014
+"713","Corelli's Mandolin",83563,437,4,1994
+"714","Grimm's Fairy Tales",26758,518,4.13,1812
+"715","Jitterbug Perfume",73836,342,4.23,1984
+"716","A Heartbreaking Work of Staggering Genius",177836,437,3.69,2000
+"717","The Sisterhood of the Traveling Pants",680399,294,3.83,2001
+"718","Prodigal Summer",106468,444,4.02,2000
+"719","Freakonomics: A Rogue Economist Explores the Hidden Side of Everything",814285,268,4,2005
+"720","The Sirens of Titan",131343,224,4.15,1959
+"721","Tempted",161986,319,3.95,2009
+"722","Cosmos",138073,365,4.38,1980
+"723","Under the Dome",285045,1074,3.91,2009
+"724","Death on the Nile",223397,352,4.12,1937
+"725","Bury My Heart at Wounded Knee: An Indian History of the American West",85621,509,4.23,1970
+"726","I'd Tell You I Love You, But Then I'd Have to Kill You",185422,284,3.83,2006
+"727","Howl and Other Poems",105648,56,4.13,1956
+"728","Prodigy",245953,371,4.24,2013
+"729","The Death Cure",412648,325,3.78,2011
+"730","The Book of Mormon: Another Testament of Jesus Christ",82995,531,4.27,1830
+"731","The Alienist",166889,498,4.06,1994
+"732","The Aeneid",121658,442,3.86,-19
+"733","The Elegance of the Hedgehog",173716,325,3.79,2006
+"734","Odd Thomas",262741,446,3.98,2004
+"735","The Witch of Blackbird Pond",146623,256,4.01,1958
+"736","The Big Sleep",146365,231,3.96,1939
+"737","Love Story",58240,224,3.64,1970
+"738","The No. 1 Ladies' Detective Agency",255702,235,3.8,1998
+"739","Ivanhoe",91918,496,3.76,1819
+"740","Anthem",147379,105,3.62,1938
+"741","A Good Girl's Guide to Murder",517304,433,4.36,2019
+"742","Angle of Repose",57295,569,4.24,1971
+"743","One Fish, Two Fish, Red Fish, Blue Fish",192961,64,4.16,1960
+"744","Red Rising",324041,382,4.26,2014
+"745","The Corrections",174446,653,3.82,2001
+"746","Message in a Bottle",230329,342,3.97,1998
+"747","Rubinrot",141737,345,4.12,2009
+"748","Walk Two Moons",162983,280,3.99,1994
+"749","It's Kind of a Funny Story",240185,444,4.09,2006
+"750","The Hero of Ages",355466,572,4.52,2008
+"751","Confessions of a Shopaholic",716640,368,3.68,2000
+"752","Lover Revealed",132415,455,4.29,2007
+"753","They Both Die at the End",587327,389,3.81,2017
+"754","Ender's Shadow",166117,469,4.31,1999
+"755","The Magic Mountain",44855,706,4.12,1924
+"756","How to Win Friends and Influence People",868287,288,4.22,1936
+"757","One Day",312808,435,3.81,2009
+"758","Digital Fortress",614954,510,3.69,1998
+"759","The Shell Seekers",104943,530,4.18,1987
+"760","The Jungle Books",86424,368,4.01,1895
+"761","Princess Academy",112984,314,4.03,2005
+"762","A Canticle for Leibowitz",103624,334,3.98,1959
+"763","Hard-Boiled Wonderland and the End of the World",125783,400,4.13,1985
+"764","The Iliad",418647,704,3.89,-800
+"765","Song of Solomon",103337,338,4.12,1977
+"766","Glass Houses",98866,239,3.91,2006
+"767","The Story of My Life",143924,240,4.08,1902
+"768","The Color of Magic",362784,228,4,1983
+"769","The Edge of Never",146929,426,4.22,2012
+"770","Club Dead",230050,274,4.01,2003
+"771","The Power of Myth",49119,320,4.26,1988
+"772","Lover Avenged",112356,527,4.36,2009
+"773","Chasing the Devil: The Search for Africa's Fighting Spirit",1790,336,4.12,2010
+"774","Sharp Objects",905037,254,4.01,2006
+"775","The Murder of Roger Ackroyd",229729,288,4.26,1926
+"776","Jude the Obscure",68778,310,3.83,1895
+"777","Antigone",136175,80,3.66,-441
+"778","Because of Winn-Dixie",241079,182,4.08,2000
+"779","The Blood of Olympus",281969,516,4.43,2014
+"780","Living Dead in Dallas",245772,291,3.96,2002
+"781","The Omnivore's Dilemma: A Natural History of Four Meals",198631,450,4.18,2006
+"782","Ficciones",60908,174,4.43,1944
+"783","The Portrait of a Lady",77522,797,3.79,1881
+"784","Worm Holes",2165,296,4.33,2017
+"785","The Invention of Hugo Cabret",177565,534,4.22,2007
+"786","My Name Is Asher Lev",39579,369,4.23,1972
+"787","An Abundance of Katherines",509945,229,3.53,2006
+"788","Starship Troopers",216276,264,4.01,1959
+"789","A Man Called Ove",857653,337,4.37,2012
+"790","The Passage",202786,766,4.04,2010
+"791","The Moon Is a Harsh Mistress",124420,288,4.16,1966
+"792","Around the World in Eighty Days",227537,252,3.94,1872
+"793","Swan Song",63021,956,4.29,1987
+"794","Cryptonomicon",108034,1152,4.24,1999
+"795","Naked Lunch",86567,289,3.46,1959
+"796","The Namesake",258538,291,4.01,2003
+"797","Small Gods",113630,400,4.31,1992
+"798","Still Alice",327545,292,4.32,2007
+"799","Howards End",85572,318,3.96,1910
+"800","Choke",202566,293,3.7,2001
+"801","Fire",178252,480,4.1,2009
+"802","Wild Swans: Three Daughters of China",106792,562,4.27,1991
+"803","An Ember in the Ashes",263352,446,4.26,2015
+"804","The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change",682207,372,4.15,1988
+"805","Mary Poppins",127962,209,4.02,1934
+"806","The Silent Patient",1397835,325,4.18,2019
+"807","Survivor",114326,304,3.93,1999
+"808","Holy Bible: New International Version",77067,1248,4.6,1455
+"809","Exodus",96490,608,4.34,1958
+"810","Pale Fire",46982,246,4.16,1962
+"811","The Forgotten Garden",212336,648,4.14,2008
+"812","The Sea of Tranquility",84486,449,4.29,2012
+"813","Let the Right One In",104068,513,4.04,2004
+"814","Finale",165686,454,4.13,2012
+"815","Linger",165059,384,3.88,2010
+"816","Walking Disaster",186652,448,4.17,2013
+"817","A Darker Shade of Magic",301718,400,4.07,2015
+"818","I Am the Messenger",153334,357,4.04,2002
+"819","Tender Is the Night",128257,430,3.79,1934
+"820","Gift from the Sea",47668,130,4.15,1955
+"821","The Restaurant at the End of the Universe",268150,250,4.21,1980
+"822","Ethan Frome",120118,99,3.43,1911
+"823","The Awakening",113268,360,4.14,2009
+"824","Shutter Island",183285,369,4.1,2003
+"825","Forrest Gump",65595,248,4.03,1986
+"826","Revolutionary Road",84760,355,3.92,1961
+"827","The Hunt for Red October",363618,432,4.1,1984
+"828","Mystic River",138661,416,4.16,2001
+"829","Illusions: The Adventures of a Reluctant Messiah",61986,144,4.15,1977
+"830","Cold Sassy Tree",101529,405,4.02,1984
+"831","Kane & Abel",115558,592,4.32,1979
+"832","Daughter of the Forest",61533,554,4.28,1999
+"833","The Wicked King",512198,336,4.33,2019
+"834","The Reckoning",114858,391,4.18,2010
+"835","Mort",227870,243,4.24,1987
+"836","The Bridges of Madison County",90810,224,3.67,1992
+"837","Nausea",106426,178,3.93,1938
+"838","Absalom, Absalom!",42454,316,3.97,1936
+"839","The Sparrow",70991,419,4.13,1996
+"840","The Fall",91172,147,4.04,1956
+"841","The Hotel New Hampshire",63282,520,3.92,1981
+"842","Meditations",193757,254,4.26,180
+"843","Reflected in You",338741,338,4.31,2012
+"844","Daisy Jones & The Six",884872,355,4.24,2019
+"845","Dreamfever",98841,386,4.38,2009
+"846","Specials",183197,384,3.76,2006
+"847","Gabriel's Inferno",154934,506,3.99,2011
+"848","Kingdom of Ash",291415,980,4.63,2018
+"849","Orlando",79388,336,3.87,1928
+"850","Verity",1638807,336,4.38,2018
+"851","The Millennium Trilogy",53668,1531,4.46,2005
+"852","The Sorrows of Young Werther",114592,149,3.69,1774
+"853","A Million Little Pieces",243591,515,3.67,2003
+"854","Where the Heart Is",244908,376,4.03,1995
+"855","The Assassin's Blade",283491,448,4.32,2014
+"856","Shakespeare's Sonnets",99105,488,4.25,1609
+"857","84, Charing Cross Road",72584,106,4.16,1970
+"858","Guilty Pleasures",143072,355,4.02,1993
+"859","The Gargoyle",47804,468,3.96,2008
+"860","Dead as a Doornail",212283,295,4,2005
+"861","Educated",1292609,352,4.47,2018
+"862","The Love Hypothesis",931324,356,4.23,2021
+"863","Archer's Voice",238771,345,4.31,2014
+"864","The Agony and the Ecstasy",87498,776,4.08,1958
+"865","The Well of Ascension",387358,763,4.38,2007
+"866","Dark Places",690261,349,3.95,2009
+"867","Christy",52849,512,4.24,1967
+"868","We",88141,226,3.9,1924
+"869","Fablehaven",155306,351,4.12,2006
+"870","The Golden Lily",115524,418,4.31,2012
+"871","The Pact",295280,512,4.02,1998
+"872","A Walk in the Woods: Rediscovering America on the Appalachian Trail",387862,397,4.06,1998
+"873","The Bonfire of the Vanities",77491,690,3.88,1987
+"874","Lover Mine",109989,528,4.39,2010
+"875","A Connecticut Yankee in King Arthur's Court",100533,480,3.77,1889
+"876","The City of Ember",269829,270,3.89,2003
+"877","One Foot in the Grave",101936,357,4.29,2008
+"878","A Moveable Feast",139629,192,4.03,1964
+"879","Burned",153496,323,3.96,2010
+"880","Still Life with Woodpecker",77865,288,4.03,1980
+"881","Definitely Dead",198944,324,4.01,2006
+"882","One of Us Is Lying",670329,416,3.97,2017
+"883","The Story of Edgar Sawtelle",96483,566,3.63,2008
+"884","Crank",137647,537,4.16,2004
+"885","Opal",145175,394,4.26,2012
+"886","Heartstopper: Volume One",521129,288,4.51,2018
+"887","Journey to the End of the Night",38386,453,4.2,1932
+"888","A Study in Scarlet",407466,123,4.14,1887
+"889","Beach Music",47934,800,4.17,1995
+"890","How Green Was My Valley",16571,448,4.2,1939
+"891","The Lucky One",351227,326,4.12,2007
+"892","Deception Point",646470,556,3.74,2001
+"893","The 5 Love Languages: The Secret to Love that Lasts",387532,232,4.27,1990
+"894","The Fountainhead",314297,704,3.88,1943
+"895","Night World, No. 1",63619,729,4.06,2008
+"896","Pandemonium",233313,375,4.04,2012
+"897","The Inheritance Games",373633,376,4.23,2020
+"898","The Poetry of Robert Frost",46800,607,4.24,1969
+"899","Sometimes a Great Notion",21531,640,4.25,1964
+"900","Valley of the Dolls",60675,448,3.8,1966
+"901","The Runaway Jury",294554,464,4.01,1996
+"902","The Brief Wondrous Life of Oscar Wao",253350,335,3.89,2007
+"903","Easy",225559,336,4.08,2012
+"904","Onyx",173684,421,4.25,2012
+"905","Winter",252551,832,4.43,2015
+"906","The House of Mirth",92395,351,3.96,1905
+"907","Will Grayson, Will Grayson",383435,310,3.72,2010
+"908","The Turn of the Screw",139856,121,3.4,1898
+"909","Thoughtless",138580,530,4.09,2012
+"910","Childhood's End",149188,224,4.12,1953
+"911","The Amulet of Samarkand",123739,462,4.02,2003
+"912","The Queen of Nothing",457271,300,4.37,2019
+"913","Beauty: A Retelling of the Story of Beauty and the Beast",78100,256,4.05,1978
+"914","On the Beach",41097,296,3.96,1957
+"915","Safe Haven",367959,353,4.21,2010
+"916","Between Shades of Gray",217450,344,4.37,2011
+"917","From Dead to Worse",183848,368,4.01,2008
+"918","The Bhagavad Gita",66641,160,4.16,-400
+"919","All Together Dead",196295,336,4.05,2007
+"920","Passion",162843,420,3.86,2011
+"921","Bitten",99616,436,4.02,2001
+"922","Stoner",139656,288,4.32,1965
+"923","Roll of Thunder, Hear My Cry",120828,288,3.88,1976
+"924","Light in August",59333,507,3.94,1932
+"925","A Room of One's Own",174194,112,4.2,1928
+"926","The Ruins of Gorlan",147115,249,4.24,2004
+"927","Wizard and Glass",186009,845,4.25,1997
+"928","The Dead Zone",209498,402,3.95,1979
+"929","Faefever",100161,327,4.29,2008
+"930","Dead and Gone",183934,320,4.01,2009
+"931","Thus Spoke Zarathustra",136493,327,4.07,1883
+"932","White Noise",103423,320,3.87,1985
+"933","The Dispossessed: An Ambiguous Utopia",110397,387,4.24,1974
+"934","The Mysterious Benedict Society",150476,497,4.19,2007
+"935","Silas Marner",82435,262,3.67,1861
+"936","The Immortal Life of Henrietta Lacks",686055,370,4.1,2010
+"937","Redwall",113619,352,4.13,1986
+"938","Fantasy Lover",90799,337,4.15,1999
+"939","Disgrace",99430,220,3.85,1999
+"940","This Lullaby",176763,345,4.02,2002
+"941","The Awakening / The Struggle",88125,492,3.68,1991
+"942","The Rime of the Ancient Mariner",56690,77,3.95,1792
+"943","Animal Farm / 1984",187480,400,4.3,1949
+"944","Lady Midnight",212768,688,4.37,2016
+"945","Wings",79276,290,3.76,2009
+"946","The Taming of the Shrew",165018,291,3.77,1593
+"947","The Story of Ferdinand",90198,72,4.36,1936
+"948","The Drawing of the Three",244165,463,4.23,1987
+"949","Tiger's Curse",61810,403,4.05,2011
+"950","Collected Fictions",22806,565,4.57,1998
+"951","Every Day",224202,322,3.91,2012
+"952","These Is My Words: The Diary of Sarah Agnes Prine, 1881-1901, Arizona Territories",70880,384,4.35,1998
+"953","House of Earth and Blood",359971,803,4.48,2020
+"954","All the Pretty Horses",109426,302,4.02,1992
+"955","Helter Skelter: The True Story of the Manson Murders",139629,689,4.05,1974
+"956","The Far Pavilions",43092,958,4.2,1978
+"957","The Guardian",175051,400,4.16,2003
+"958","The Horse Whisperer",56179,451,3.84,1995
+"959","Hatchet",363693,208,3.76,1987
+"960","The Maltese Falcon",100681,213,3.89,1930
+"961","Keeper of the Lost Cities",61480,496,4.43,2012
+"962","The Tempest",197071,218,3.79,1611
+"963","The Complete Persepolis",164279,341,4.39,2003
+"964","Finding Hope in the Darkness of Grief: Spiritual Insights Expressed Through Art, Poetry and Prose",1543,74,4.29,2018
+"965","Along for the Ride",201981,383,4.04,2009
+"966","Requiem for a Dream",57970,279,4.1,1978
+"967","A Doll's House",131098,122,3.75,1879
+"968","Turtles All the Way Down",502218,290,3.91,2017
+"969","Songs of Innocence and of Experience",45958,56,4.1,1794
+"970","Normal People",1055152,273,3.82,2018
+"971","The Last of the Mohicans",95018,410,3.7,1826
+"972","Running with Scissors",379444,304,3.75,2002
+"973","Unearthly",125922,435,4.02,2011
+"974","Red Dragon",313123,454,4.05,1981
+"975","Breaking Dawn",1582916,756,3.73,2008
+"976","Suzanne's Diary for Nicholas",146954,289,4.17,2001
+"977","The Razor's Edge",44449,314,4.19,1944
+"978","Hogfather",88368,432,4.24,1996
+"979","The Pilgrim's Progress",127799,324,4.03,1684
+"980","Smilla's Sense of Snow",47083,469,3.74,1992
+"981","Blue Bloods",138805,302,3.69,2006
+"982","Shot Down: The True Story of Pilot Howard Snyder and the Crew of the B-17 Susan Ruth",8763,376,4.21,2014
+"983","The Man in the High Castle",198017,259,3.61,1962
+"984","Dirk Gently's Holistic Detective Agency",134946,306,3.97,1987
+"985","A Passage to India",76255,376,3.68,1924
+"986","The Client",430855,483,4.04,1993
+"987","Eleven Minutes",168345,273,3.71,2003
+"988","A Bend in the Road",149638,341,4.04,2001
+"989","Eugene Onegin",59911,240,4.1,1833
+"990","Everything, Everything",562450,312,4,2015
+"991","Walks Away Woman",1140,254,4.37,2013
+"992","At Grave's End",87609,342,4.29,2008
