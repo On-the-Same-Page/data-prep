@@ -245,6 +245,19 @@ for (award in awards_of_interest) {
   data_awards[,award] = str_detect(data_awards$awards_list, award)
 }
 
+for (i in 1:nrow(data_awards)) {
+  
+  any_award <- FALSE
+  
+  for (award in awards_of_interest) {
+    
+    any_award <- any_award || data_awards[i, award]
+    
+  }
+  
+  data_awards[i, 'any_award'] <- any_award
+}
+
 genre_buttons <- c('Science Fiction', 'Historical Fiction', 'Thriller', 'Mystery', 'Romance', 'Fantasy', 'Nonfiction')
 
 data_main <- data_awards
@@ -370,7 +383,6 @@ data_with_covers$pos1_i <- pos1$pos_i
 data_with_covers$pos1_j <- pos1$pos_j
 data_with_covers$pos2_i <- pos2$pos_i
 data_with_covers$pos2_j <- pos2$pos_j
-
 
 # write data out ----------------------------------------------------------
 
